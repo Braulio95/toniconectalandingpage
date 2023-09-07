@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import NavBarComp from "./components/NavBar/NavBarComp";
 import CarrouselComp from "./components/CarrouselComp/CarrouselComp";
 

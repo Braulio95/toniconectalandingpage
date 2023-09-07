@@ -1,15 +1,14 @@
 import React from "react";
 import "./App.css";
-import CardComp from "./components/CardComp/CardComp";
-import ThemeProvider from "react-bootstrap/ThemeProvider";
+import NavBarComp from "./components/NavBar/NavBarComp";
+import CarrouselComp from "./components/CarrouselComp/CarrouselComp";
 
 function App() {
   return (
-    <ThemeProvider>
-      <div className="App">
-        <CardComp />
-      </div>
-    </ThemeProvider>
+    <div className="App">
+      <NavBarComp />
+      <CarrouselComp></CarrouselComp>
+    </div>
   );
 }
 

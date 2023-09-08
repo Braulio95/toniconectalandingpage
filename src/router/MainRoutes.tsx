@@ -30,6 +30,10 @@ export const MainRoutes = () => {
       routePath: "CONTACT",
     },
   ];
+
+  const ToolsUsed = [{ id: 1, label: "Javascript", routePath: "javascript" }];
+  const Contacts = [{ id: 1, label: "braulioestradaalfonso@hotmail.com" }];
+
   return (
     <BrowserRouter>
       {/* Header and navigation */}
@@ -42,7 +46,7 @@ export const MainRoutes = () => {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      <Footer />
+      <Footer ToolsUsed={ToolsUsed} Contacts={Contacts} />
     </BrowserRouter>
   );
 };

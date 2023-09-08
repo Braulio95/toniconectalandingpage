@@ -8,11 +8,33 @@ import { Footer } from "../components/Footer/Footer";
 import NavBarComp from "../components/NavBar/NavBarComp";
 
 export const MainRoutes = () => {
+  const navTabs = [
+    {
+      id: 1,
+      label: "Home",
+      routePath: "HOME",
+    },
+    {
+      id: 2,
+      label: "Blog",
+      routePath: "BLOG",
+    },
+    {
+      id: 3,
+      label: "Portfolio",
+      routePath: "PORTFOLIO",
+    },
+    {
+      id: 4,
+      label: "Contact",
+      routePath: "CONTACT",
+    },
+  ];
   return (
     <BrowserRouter>
       {/* Header and navigation */}
       {/* Main Content */}
-      <NavBarComp />
+      <NavBarComp pageName="Braulio Blog" tabItems={navTabs} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />

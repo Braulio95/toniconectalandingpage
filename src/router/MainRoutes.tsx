@@ -39,13 +39,15 @@ export const MainRoutes = () => {
       {/* Header and navigation */}
       {/* Main Content */}
       <NavBarComp pageName="Braulio Blog" tabItems={navTabs} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <div className="layout">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
       <Footer ToolsUsed={ToolsUsed} Contacts={Contacts} />
     </BrowserRouter>
   );

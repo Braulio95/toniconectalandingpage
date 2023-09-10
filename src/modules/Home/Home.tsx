@@ -1,5 +1,4 @@
 import React from "react";
-import CarrouselComp from "../../components/CarrouselComp/CarrouselComp";
 
 export const Home = () => {
   return (
@@ -9,12 +8,12 @@ export const Home = () => {
         Mexico and I offer my programming web services in{" "}
         <strong>Front-end</strong> projects.
       </h1>
-      <CarrouselComp />
       <h2>
         I help you to build your UI, getting more visibility and relevance in
         the internet.
+        <a href="/">Contact me</a>
       </h2>
-      <section>
+      <section className="last-works">
         <h2>Check some of my projects</h2>
         <p>This are some of the projects I have work with:</p>
         <div className="works">Some Works</div>

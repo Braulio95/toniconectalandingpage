@@ -11,7 +11,7 @@ export const Home = () => {
       <h2>
         I help you to build your UI, getting more visibility and relevance in
         the internet.
-        <a href="/">Contact me</a>
+        <a href="/contact">Contact me</a>
       </h2>
       <section className="last-works">
         <h2>Check some of my projects</h2>

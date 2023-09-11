@@ -2,27 +2,48 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import { colorPalette } from "../../styles/partials/colors";
+import { StrongComp } from "../../components/StrongComp/StrongComp";
+import { LinkComp } from "../../components/LinkComp/LinkComp";
 
 export const Home = () => {
+  const containerStyle = {
+    minHeight: "82vh",
+    padding: "20px",
+  };
+
+  const headingStyle = {
+    fontFamily: 'Georgia, "Times New Roman", Times, serif',
+    fontWeight: 400,
+    fontSize: "4rem",
+  };
+
+  const subHeadingStyle = {
+    color: colorPalette.strongGreen,
+    fontWeight: "lighter",
+  };
+
   return (
-    <Container className="home" fluid="xl" style={{ minHeight: "82vh" }}>
+    <Container className="home" style={containerStyle}>
       <Row>
         <Col>
-          <h1>
-            Hi my name is <strong>Braulio Estrada</strong>, I am a web developer
-            in Mexico and I offer my programming web services in{" "}
-            <strong>Front-end</strong> projects.
+          <h1 style={headingStyle}>
+            Hi my name is{" "}
+            <StrongComp color={colorPalette.strongestGreen}>
+              Braulio Estrada
+            </StrongComp>
+            , I am a web developer in Mexico and I offer my programming web
+            services in{" "}
+            <StrongComp color={colorPalette.strongestGreen}>
+              Front-end
+            </StrongComp>{" "}
+            projects.
           </h1>
-          <h2>
+          <h2 style={{ ...subHeadingStyle, paddingBlock: "2rem" }}>
             I help you to build your UI, getting more visibility and relevance
             in the internet.
-            <a href="/contact">Contact me</a>
+            <LinkComp link="link">Contact me</LinkComp>
           </h2>
-          <section className="last-works">
-            <h2>Check some of my projects</h2>
-            <p>This are some of the projects I have work with:</p>
-            <div className="works">Some Works</div>
-          </section>
         </Col>
       </Row>
     </Container>

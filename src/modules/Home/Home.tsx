@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 
 export const Home = () => {
   return (
-    <Container className="home" fluid="xl">
+    <Container className="home" fluid="xl" style={{ minHeight: "75vh" }}>
       <Row>
         <Col>
           <h1>

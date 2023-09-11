@@ -3,6 +3,7 @@ const mainRouter = () => ({
     BLOG: '/blog',
     CONTACT: '/contact',
     PORTFOLIO: '/portfolio',
+    CURRICULUM: '/curriculum'
 
 });
 export const MAIN_ROUTES = mainRouter();

@@ -7,9 +7,10 @@ import { Contact } from "../modules/Contact/Contact";
 import { Footer } from "../components/Footer/Footer";
 import NavBarComp from "../components/NavBar/NavBarComp";
 import { MAIN_ROUTES } from "../constants/routes";
+import { Curriculum } from "../modules/curriculum/Curriculum";
 
 export const MainRoutes = () => {
-  const { HOME, BLOG, PORTFOLIO, CONTACT } = MAIN_ROUTES;
+  const { HOME, BLOG, PORTFOLIO, CONTACT, CURRICULUM } = MAIN_ROUTES;
   const navTabs = [
     {
       id: 1,
@@ -26,15 +27,18 @@ export const MainRoutes = () => {
       label: "Portfolio",
       routePath: PORTFOLIO,
     },
+
     {
       id: 4,
+      label: "Curriculum",
+      routePath: CURRICULUM,
+    },
+    {
+      id: 5,
       label: "Contact",
       routePath: CONTACT,
     },
   ];
-
-  const ToolsUsed = [{ id: 1, label: "Javascript", routePath: "javascript" }];
-  const Contacts = [{ id: 1, label: "braulioestradaalfonso@hotmail.com" }];
 
   return (
     <BrowserRouter>
@@ -47,10 +51,11 @@ export const MainRoutes = () => {
           <Route path={HOME} element={<Home />} />
           <Route path={BLOG} element={<Blog />} />
           <Route path={PORTFOLIO} element={<Portfolio />} />
+          <Route path={CURRICULUM} element={<Curriculum />} />
           <Route path={CONTACT} element={<Contact />} />
         </Routes>
       </div>
-      <Footer ToolsUsed={ToolsUsed} Contacts={Contacts} />
+      <Footer />
     </BrowserRouter>
   );
 };

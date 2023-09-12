@@ -5,6 +5,8 @@ import Row from "react-bootstrap/Row";
 import { colorPalette } from "../../styles/partials/colors";
 import { StrongComp } from "../../components/StrongComp/StrongComp";
 import { LinkComp } from "../../components/LinkComp/LinkComp";
+import { WebIcon } from "../../components/Icons/WebIcon/WebIcon";
+import { InterfaceIcon } from "../../components/Icons/InterfaceIcon/InterfaceIcon";
 
 export const Home = () => {
   const containerStyle = {
@@ -24,7 +26,18 @@ export const Home = () => {
   };
 
   return (
-    <Container className="home" style={containerStyle}>
+    <Container className="home" style={{ ...containerStyle }}>
+      <Row>
+        <Col>
+          <WebIcon />
+        </Col>
+        <Col>
+          <InterfaceIcon />
+        </Col>
+        <Col>
+          <InterfaceIcon />
+        </Col>
+      </Row>
       <Row>
         <Col>
           <h1 style={headingStyle}>
@@ -32,8 +45,7 @@ export const Home = () => {
             <StrongComp color={colorPalette.strongestGreen}>
               Braulio Estrada
             </StrongComp>
-            , I am a web developer in Mexico and I offer my programming web
-            services in{" "}
+            , I am a web developer in Mexico and I offer my web services in{" "}
             <StrongComp color={colorPalette.strongestGreen}>
               Front-end
             </StrongComp>{" "}

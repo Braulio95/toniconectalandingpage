@@ -1,5 +1,5 @@
 import React from "react";
-import { IconProps } from "../../types/interfaces/IconProps";
+import { IconProps } from "../../../types/interfaces/IconProps";
 
 export const Linkedin = ({ height, width, color }: IconProps) => {
   return (

@@ -1,0 +1,17 @@
+.bg-sunset {
+  position: relative;
+  background-color: rgba(203, 213, 192, 0.3);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: url("C:\Users\braul\OneDrive\Documentos\Documentos Personales\KSquare\ITK\landingpage\my-blog\src\assets\background\sunrise.jpg");
+    background-size: 120%;
+    background-position: top center;
+    opacity: 0.15;
+  }
+}

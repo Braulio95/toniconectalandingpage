@@ -12,11 +12,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.layout {
-  width: 80%;
-  margin: 0 auto;
-  padding-block: 2rem;
-}
 
 .home a:hover {
   color: #cbd5c0;

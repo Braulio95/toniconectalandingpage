@@ -8,6 +8,7 @@ import { Footer } from "../components/Footer/Footer";
 import NavBarComp from "../components/NavBar/NavBarComp";
 import { MAIN_ROUTES } from "../constants/routes";
 import { Curriculum } from "../modules/curriculum/Curriculum";
+import "./MainRoutes.css";
 
 export const MainRoutes = () => {
   const { HOME, BLOG, PORTFOLIO, CONTACT, CURRICULUM } = MAIN_ROUTES;
@@ -44,18 +45,28 @@ export const MainRoutes = () => {
     <BrowserRouter>
       {/* Header and navigation */}
       {/* Main Content */}
-      <NavBarComp pageName="Braulio Blog" tabItems={navTabs} />
-      <div className="layout">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path={HOME} element={<Home />} />
-          <Route path={BLOG} element={<Blog />} />
-          <Route path={PORTFOLIO} element={<Portfolio />} />
-          <Route path={CURRICULUM} element={<Curriculum />} />
-          <Route path={CONTACT} element={<Contact />} />
-        </Routes>
+      <div className="bg-sunset">
+        <NavBarComp pageName="Braulio Blog" tabItems={navTabs} />
+        <div
+          className="layout"
+          style={{
+            width: "80%",
+            margin: "0 auto",
+            paddingBlock: "2rem",
+            position: "relative",
+          }}
+        >
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path={HOME} element={<Home />} />
+            <Route path={BLOG} element={<Blog />} />
+            <Route path={PORTFOLIO} element={<Portfolio />} />
+            <Route path={CURRICULUM} element={<Curriculum />} />
+            <Route path={CONTACT} element={<Contact />} />
+          </Routes>
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </BrowserRouter>
   );
 };

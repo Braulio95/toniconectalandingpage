@@ -7,6 +7,7 @@ import { StrongComp } from "../../components/StrongComp/StrongComp";
 import { LinkComp } from "../../components/LinkComp/LinkComp";
 import { WebIcon } from "../../components/Icons/WebIcon/WebIcon";
 import { InterfaceIcon } from "../../components/Icons/InterfaceIcon/InterfaceIcon";
+import { ApiIcon } from "../../components/Icons/ApiIcon/ApiIcon";
 
 export const Home = () => {
   const containerStyle = {
@@ -35,7 +36,7 @@ export const Home = () => {
           <InterfaceIcon />
         </Col>
         <Col>
-          <InterfaceIcon />
+          <ApiIcon />
         </Col>
       </Row>
       <Row>

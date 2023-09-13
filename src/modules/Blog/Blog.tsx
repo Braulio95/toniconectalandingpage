@@ -37,7 +37,7 @@ export const Blog = () => {
   ];
   return (
     <Container
-      fluid
+      fluid="xxl"
       className="blog"
       style={{
         minHeight: "82vh",

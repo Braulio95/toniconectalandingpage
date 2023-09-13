@@ -22,7 +22,7 @@ export const Home = () => {
 
   return (
     <Container
-      fluid
+      fluid="xxl"
       className="home"
       style={{
         minHeight: "82vh",

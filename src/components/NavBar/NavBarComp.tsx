@@ -7,9 +7,14 @@ import { MAIN_ROUTES } from "../../constants/routes";
 
 function NavBarComp({ pageName, tabItems }: NavBarProps) {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
+    <Navbar
+      expand="lg"
+      className="bg-body-tertiary"
+      style={{ boxShadow: `0px 6px 12px rgba(20, 63, 156, 0.2)` }}
+    >
+      <Container fluid="xxl">
         <Navbar.Brand href={MAIN_ROUTES.HOME}>{pageName}</Navbar.Brand>
+
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="justify-content-end">
           {tabItems && tabItems.length && (

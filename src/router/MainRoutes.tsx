@@ -54,6 +54,7 @@ export const MainRoutes = () => {
             margin: "0 auto",
             paddingBlock: "2rem",
             position: "relative",
+            fontFamily: 'Georgia, "Times New Roman", Times, serif',
           }}
         >
           <Routes>

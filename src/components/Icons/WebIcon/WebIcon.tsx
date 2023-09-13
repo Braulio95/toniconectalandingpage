@@ -1,15 +1,17 @@
 import React from "react";
 import { colorPalette } from "../../../styles/partials/colors";
+import { IconProps } from "../../../types/interfaces/IconProps";
 
-export const WebIcon = () => {
+export const WebIcon = ({ width, height, color, style }: IconProps) => {
   return (
     <svg
-      width="300px"
-      height="300px"
+      width={width}
+      height={height}
       viewBox="0 0 1024 1024"
       className="icon"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
+      style={style}
     >
       <path
         d="M854.7 828.1H169.9c-38.9 0-70.5-31.6-70.5-70.5v-499c0-38.9 31.6-70.5 70.5-70.5h684.7c38.9 0 70.5 31.6 70.5 70.5v499c0.1 38.9-31.5 70.5-70.4 70.5z"
@@ -29,7 +31,7 @@ export const WebIcon = () => {
       />
       <path
         d="M235.5 251.8c-28.2 0-51.2 23-51.2 51.2s23 51.2 51.2 51.2 51.2-23 51.2-51.2-22.9-51.2-51.2-51.2z m0 82.4c-17.2 0-31.2-14-31.2-31.2s14-31.2 31.2-31.2 31.2 14 31.2 31.2-14 31.2-31.2 31.2z"
-        fill={colorPalette.strongestGreen} //Line color green
+        fill={color} //Line color green
       />
       <path
         d="M517.3 280.1H374.7c-13 0-23.7 10.6-23.7 23.7s10.6 23.7 23.7 23.7h142.6c13 0 23.7-10.6 23.7-23.7s-10.7-23.7-23.7-23.7z"
@@ -37,15 +39,15 @@ export const WebIcon = () => {
       />
       <path
         d="M517.3 260.1H374.7c-24.1 0-43.7 19.6-43.7 43.7s19.6 43.7 43.7 43.7h142.6c24.1 0 43.7-19.6 43.7-43.7s-19.6-43.7-43.7-43.7z m0 67.3H374.7c-13 0-23.7-10.6-23.7-23.7s10.6-23.7 23.7-23.7h142.6c13 0 23.7 10.6 23.7 23.7s-10.7 23.7-23.7 23.7z"
-        fill={colorPalette.strongestGreen} //Line color green
+        fill={color} //Line color green
       />
       <path
         d="M855.2 188.1H169.4c-38.6 0-70 31.4-70 70v500c0 38.6 31.4 70 70 70h685.7c38.6 0 70-31.4 70-70v-500c0.1-38.6-31.3-70-69.9-70z m30 570c0 16.5-13.5 30-30 30H169.4c-16.5 0-30-13.5-30-30V398.2h745.7v359.9z m0-379.9H139.5V258.1c0-16.5 13.5-30 30-30h685.7c16.5 0 30 13.5 30 30v120.1z"
-        fill={colorPalette.strongestGreen} //Line color green
+        fill={color} //Line color green
       />
       <path
         d="M459.9 624.6l-114.3-45.3 114.3-43.7v-46.5L296.1 560v39.5l163.8 71.2zM568.7 454.8h-34.4L475.1 702h33.8zM747.9 560.3l-164-70.9v45.8l114.4 44.5-114.4 45v46.2l164-71.4z"
-        fill={colorPalette.strongestGreen} //Line color green
+        fill={color} //Line color green
       />
     </svg>
   );

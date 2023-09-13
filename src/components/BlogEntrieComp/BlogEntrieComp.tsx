@@ -16,7 +16,7 @@ export const BlogEntrieComp = ({
         backgroundColor: "white",
         borderRadius: "1rem",
         marginBottom: "1rem",
-        boxShadow: `2px 2px 2px 0px ${colorPalette.neutralGray2}`,
+        boxShadow: "0px 6px 12px rgba(20, 63, 156, 0.2)",
       }}
     >
       <Col>
@@ -34,7 +34,7 @@ export const BlogEntrieComp = ({
               className="entrie-title"
               style={{
                 color: colorPalette.strongGreen,
-                fontWeight: "800",
+                fontWeight: "700",
               }}
             >
               {title}

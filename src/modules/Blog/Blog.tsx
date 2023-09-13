@@ -37,7 +37,7 @@ export const Blog = () => {
   ];
   return (
     <Container
-      fluid
+      fluid="xxl"
       className="blog"
       style={{
         minHeight: "82vh",
@@ -50,9 +50,10 @@ export const Blog = () => {
         </Col>
       </Row>
       {entries.length ? (
-        entries.map(({ title, date, content, img }) => {
+        entries.map(({ title, date, content, img }, index) => {
           return (
             <BlogEntrieComp
+              key={index + 1}
               title={title}
               date={date}
               content={content}

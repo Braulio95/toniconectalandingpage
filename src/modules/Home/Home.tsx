@@ -10,33 +10,45 @@ import { InterfaceIcon } from "../../components/Icons/InterfaceIcon/InterfaceIco
 import { ApiIcon } from "../../components/Icons/ApiIcon/ApiIcon";
 
 export const Home = () => {
-  const containerStyle = {
-    minHeight: "82vh",
-    padding: "20px",
-  };
-
   const headingStyle = {
-    fontFamily: 'Georgia, "Times New Roman", Times, serif',
     fontWeight: 400,
     fontSize: "4rem",
+    color: colorPalette.strongGreen,
   };
 
   const subHeadingStyle = {
-    color: colorPalette.strongGreen,
     fontWeight: "lighter",
   };
 
   return (
-    <Container className="home" style={{ ...containerStyle }}>
+    <Container
+      className="home"
+      style={{
+        minHeight: "82vh",
+        padding: "20px",
+      }}
+    >
       <Row>
         <Col>
-          <WebIcon />
+          <WebIcon
+            width="300px"
+            height="300px"
+            color={colorPalette.strongestGreen}
+          />
         </Col>
         <Col>
-          <InterfaceIcon />
+          <InterfaceIcon
+            width="300px"
+            height="300px"
+            color={colorPalette.strongestGreen}
+          />
         </Col>
         <Col>
-          <ApiIcon />
+          <ApiIcon
+            width="300px"
+            height="300px"
+            color={colorPalette.strongestGreen}
+          />
         </Col>
       </Row>
       <Row>

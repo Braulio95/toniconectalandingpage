@@ -34,7 +34,7 @@ export const BlogEntrieComp = ({
               className="entrie-title"
               style={{
                 color: colorPalette.strongGreen,
-                fontWeight: "800",
+                fontWeight: "700",
               }}
             >
               {title}

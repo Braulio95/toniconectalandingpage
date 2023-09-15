@@ -1,10 +1,53 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
-import { StrongComp } from "../../components/StrongComp/StrongComp";
 import { colorPalette } from "../../styles/partials/colors";
+import { ExpComp } from "../../components/ExpComp/ExpComp";
+import { SubtitleComp } from "../../components/SubtitleComp/SubtitleComp";
 
 export const Curriculum = () => {
+  const workExperience = [
+    {
+      id: 1,
+      date: "date",
+      company: "The ksquare group",
+      role: "Developer",
+      description:
+        "lorem asdasdasdasdasdasdas sdfffffff sdfsdf sfsf sdfsdfsdfsdf sdfskldjfksjdfs sdlkfjskldfsklfjsfd adasdasdasdasdas",
+    },
+    {
+      id: 2,
+      date: "date2",
+      company: "Company XYZ",
+      role: "Designer",
+      description: "lorem ipsum dolor sit amet",
+    },
+    {
+      id: 3,
+      date: "date3",
+      company: "Tech Solutions Inc.",
+      role: "Software Engineer",
+      description: "consectetur adipiscing elit",
+    },
+    {
+      id: 4,
+      date: "date4",
+      company: "ABC Corporation",
+      role: "Project Manager",
+      description: "sed do eiusmod tempor incididunt",
+    },
+  ];
+
+  const education = [
+    {
+      id: 1,
+      date: "date",
+      company: "The ksquare group",
+      role: "Developer",
+      description:
+        "lorem asdasdasdasdasdasdas sdfffffff sdfsdf sfsf sdfsdfsdfsdf sdfskldjfksjdfs sdlkfjskldfsklfjsfd adasdasdasdasdas",
+    },
+  ];
   return (
     <Container
       id="curriculum"
@@ -19,83 +62,11 @@ export const Curriculum = () => {
     >
       <Row>
         <Col xxl="12">
-          <h2>
-            <StrongComp color={colorPalette.strongestGreen}>
-              Curriculum
-            </StrongComp>
-          </h2>
+          <SubtitleComp>Curriculum</SubtitleComp>
         </Col>
       </Row>
-      <Container>
-        <Row>
-          <Col style={{ textAlign: "center" }}>
-            <h3>Work Experience</h3>
-          </Col>
-        </Row>
-        <Row>
-          <Col style={{ textAlign: "right", borderRight: `1px solid black` }}>
-            <p>February 2023 - August 2024</p>
-          </Col>
-          <Col>
-            <h3>The Ksquare Group</h3> <h4>Trainee software developer</h4>{" "}
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Veritatis, rem explicabo. Ea veritatis earum consectetur accusamus
-              est dolorem ipsa ipsum unde, assumenda rerum amet voluptatibus
-              esse ratione illo a qui.
-            </p>{" "}
-          </Col>
-        </Row>
-        <Row>
-          <Col style={{ textAlign: "right", borderRight: `1px solid black` }}>
-            <p>February 2023 - August 2024</p>
-          </Col>
-          <Col>
-            <h3>The Ksquare Group</h3> <h4>Trainee software developer</h4>{" "}
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Veritatis, rem explicabo. Ea veritatis earum consectetur accusamus
-              est dolorem ipsa ipsum unde, assumenda rerum amet voluptatibus
-              esse ratione illo a qui.
-            </p>{" "}
-          </Col>
-        </Row>
-      </Container>
-      <Container>
-        <Row>
-          <Col style={{ textAlign: "center" }}>
-            <h3>Education</h3>
-          </Col>
-        </Row>
-        <Row>
-          <Col style={{ textAlign: "right", borderRight: `1px solid black` }}>
-            <p>February 2023 - August 2024</p>
-          </Col>
-          <Col>
-            <h3>The Ksquare Group</h3> <h4>Trainee software developer</h4>{" "}
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Veritatis, rem explicabo. Ea veritatis earum consectetur accusamus
-              est dolorem ipsa ipsum unde, assumenda rerum amet voluptatibus
-              esse ratione illo a qui.
-            </p>{" "}
-          </Col>
-        </Row>
-        <Row>
-          <Col style={{ textAlign: "right", borderRight: `1px solid black` }}>
-            <p>February 2023 - August 2024</p>
-          </Col>
-          <Col>
-            <h3>The Ksquare Group</h3> <h4>Trainee software developer</h4>{" "}
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Veritatis, rem explicabo. Ea veritatis earum consectetur accusamus
-              est dolorem ipsa ipsum unde, assumenda rerum amet voluptatibus
-              esse ratione illo a qui.
-            </p>{" "}
-          </Col>
-        </Row>
-      </Container>
+      <ExpComp experiences={workExperience} type="Work Experience" />
+      <ExpComp experiences={education} type="Education" />
     </Container>
   );
 };

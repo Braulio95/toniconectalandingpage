@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Home } from "../modules/Home/Home";
 //import { Blog } from "../modules/Blog/Blog";
 import { Portfolio } from "../modules/Portfolio/Portfolio";
-//import { Contact } from "../modules/Contact/Contact";
+import { Contact } from "../modules/Contact/Contact";
 import { Footer } from "../components/Footer/Footer";
 import NavBarComp from "../components/NavBar/NavBarComp";
 import { MAIN_ROUTES } from "../constants/routes";
@@ -47,7 +47,6 @@ export const MainRoutes = () => {
       <div
         className="bg-sunset"
         style={{
-          backgroundColor: "rgba(203, 213, 192, 0.2)",
           fontFamily: 'sans-serif, "Times New Roman", Times, serif',
         }}
       >
@@ -59,6 +58,7 @@ export const MainRoutes = () => {
         <Home />
         <Portfolio />
         <Curriculum />
+        <Contact />
         <Footer />
       </div>
     </BrowserRouter>

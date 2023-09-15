@@ -1,7 +1,6 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
-import { colorPalette } from "../../styles/partials/colors";
 import { ExpComp } from "../../components/ExpComp/ExpComp";
 import { SubtitleComp } from "../../components/SubtitleComp/SubtitleComp";
 
@@ -9,7 +8,7 @@ export const Curriculum = () => {
   const workExperience = [
     {
       id: 1,
-      date: "date",
+      date: "Feb 2023 - Aug 2024",
       company: "The ksquare group",
       role: "Developer",
       description:
@@ -17,21 +16,21 @@ export const Curriculum = () => {
     },
     {
       id: 2,
-      date: "date2",
+      date: "Feb 2023 - Aug 2024",
       company: "Company XYZ",
       role: "Designer",
       description: "lorem ipsum dolor sit amet",
     },
     {
       id: 3,
-      date: "date3",
+      date: "Feb 2023 - Aug 2024",
       company: "Tech Solutions Inc.",
       role: "Software Engineer",
       description: "consectetur adipiscing elit",
     },
     {
       id: 4,
-      date: "date4",
+      date: "Feb 2023 - Aug 2024",
       company: "ABC Corporation",
       role: "Project Manager",
       description: "sed do eiusmod tempor incididunt",
@@ -41,7 +40,7 @@ export const Curriculum = () => {
   const education = [
     {
       id: 1,
-      date: "date",
+      date: "Feb 2023 - Aug 2024",
       company: "The ksquare group",
       role: "Developer",
       description:
@@ -57,7 +56,7 @@ export const Curriculum = () => {
         paddingInline: "5%",
         height: "100%",
         paddingBottom: "10%",
-        marginBottom: "10%",
+        marginBottom: "8%",
       }}
     >
       <Row>

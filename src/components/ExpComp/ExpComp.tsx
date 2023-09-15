@@ -21,8 +21,10 @@ export const ExpComp = ({ experiences, type }: ExpProps) => {
       </Row>
       {experiences.map(({ date, company, role, description }) => {
         return (
-          <Row style={{ minWidth: "400px" }}>
+          <Row>
             <Col
+              xs={2}
+              xxl={2}
               style={{
                 textAlign: "right",
                 borderRight: `1px groove ${colorPalette.neutralGray2}`,
@@ -40,7 +42,7 @@ export const ExpComp = ({ experiences, type }: ExpProps) => {
                 {date}
               </p>
             </Col>
-            <Col>
+            <Col xs={10} xxl={10} style={{ overflow: "auto" }}>
               <p
                 style={{
                   color: colorPalette.strongGreen,

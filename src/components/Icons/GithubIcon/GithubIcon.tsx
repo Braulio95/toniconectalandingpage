@@ -1,12 +1,13 @@
 import React from "react";
 import { IconProps } from "../../../types/interfaces/IconProps";
 
-export const GithubIcon = ({ height, width, color }: IconProps) => {
+export const GithubIcon = ({ height, width, color, style }: IconProps) => {
   return (
     <svg
       fill={color}
       height={height}
       width={width}
+      style={style}
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"

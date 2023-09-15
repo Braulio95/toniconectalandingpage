@@ -5,7 +5,7 @@ import { NavBarProps } from "../../types/interfaces/NavBarProps";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { MAIN_ROUTES } from "../../constants/routes";
 import { colorPalette } from "../../styles/partials/colors";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 function NavBarComp({ pageName, tabItems }: NavBarProps) {
   return (
@@ -18,7 +18,11 @@ function NavBarComp({ pageName, tabItems }: NavBarProps) {
       <Container fluid="xxl">
         <Navbar.Brand
           href={MAIN_ROUTES.HOME}
-          style={{ color: colorPalette.strongGreen, fontSize: "1.5rem", fontWeight:"900"}}
+          style={{
+            color: colorPalette.strongGreen,
+            fontSize: "1.5rem",
+            fontWeight: "900",
+          }}
         >
           {pageName}
         </Navbar.Brand>
@@ -32,8 +36,8 @@ function NavBarComp({ pageName, tabItems }: NavBarProps) {
                   <Nav.Link
                     key={id}
                     eventKey={id}
-                    as={Link}
-                    to={routePath}
+                    as={HashLink}
+                    to={`#${routePath}`}
                     style={{ color: colorPalette.strongestGreen }}
                   >
                     {label}

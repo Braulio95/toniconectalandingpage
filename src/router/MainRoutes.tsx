@@ -3,14 +3,13 @@ import { BrowserRouter } from "react-router-dom";
 import { Home } from "../modules/Home/Home";
 //import { Blog } from "../modules/Blog/Blog";
 import { Portfolio } from "../modules/Portfolio/Portfolio";
-import { Contact } from "../modules/Contact/Contact";
 import { Footer } from "../components/Footer/Footer";
 import NavBarComp from "../components/NavBar/NavBarComp";
 import { MAIN_ROUTES } from "../constants/routes";
 import { Curriculum } from "../modules/curriculum/Curriculum";
 
 export const MainRoutes = () => {
-  const { HOME, BLOG, PORTFOLIO, CONTACT, CURRICULUM } = MAIN_ROUTES;
+  const { HOME, BLOG, PORTFOLIO, CURRICULUM } = MAIN_ROUTES;
   const navTabs = [
     {
       id: 1,
@@ -30,11 +29,6 @@ export const MainRoutes = () => {
     },
     {
       id: 4,
-      label: "Contact",
-      routePath: CONTACT,
-    },
-    {
-      id: 5,
       label: "Blog",
       routePath: BLOG,
     },
@@ -44,23 +38,11 @@ export const MainRoutes = () => {
     <BrowserRouter>
       {/* Header and navigation */}
       {/* Main Content */}
-      <div
-        className="bg-sunset"
-        style={{
-          fontFamily: 'sans-serif, "Times New Roman", Times, serif',
-        }}
-      >
-        <NavBarComp pageName="Braulio Blog" tabItems={navTabs} />
-        {/*<Routes>
-          <Route path={HOME} element={<Home />} />
-          <Route path={BLOG} element={<Blog />} />
-      </Routes>*/}
-        <Home />
-        <Portfolio />
-        <Curriculum />
-        <Contact />
-        <Footer />
-      </div>
+      <NavBarComp pageName="Braulio Blog" tabItems={navTabs} />
+      <Home />
+      <Portfolio />
+      <Curriculum />
+      <Footer />
     </BrowserRouter>
   );
 };

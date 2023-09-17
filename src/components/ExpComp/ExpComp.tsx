@@ -24,7 +24,7 @@ export const ExpComp = ({ experiences, type }: ExpProps) => {
           <Row>
             <Col
               xs={2}
-              xxl={2}
+              xxl={6}
               style={{
                 textAlign: "right",
                 borderRight: `1px groove ${colorPalette.neutralGray2}`,
@@ -42,7 +42,7 @@ export const ExpComp = ({ experiences, type }: ExpProps) => {
                 {date}
               </p>
             </Col>
-            <Col xs={10} xxl={10} style={{ overflow: "auto" }}>
+            <Col xs={10} xxl={6} style={{ overflow: "auto" }}>
               <p
                 style={{
                   color: colorPalette.strongGreen,

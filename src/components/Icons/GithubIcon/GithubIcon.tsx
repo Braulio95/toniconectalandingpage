@@ -1,7 +1,14 @@
 import React from "react";
 import { IconProps } from "../../../types/interfaces/IconProps";
 
-export const GithubIcon = ({ height, width, color, style }: IconProps) => {
+export const GithubIcon = ({
+  height,
+  width,
+  color,
+  style,
+  onMouseEnter,
+  onMouseLeave,
+}: IconProps) => {
   return (
     <svg
       fill={color}
@@ -14,6 +21,8 @@ export const GithubIcon = ({ height, width, color, style }: IconProps) => {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       viewBox="-267 288.9 264.5 225.1"
       xmlSpace="preserve"
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       <g>
         <path

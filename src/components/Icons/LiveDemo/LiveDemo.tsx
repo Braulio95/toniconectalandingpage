@@ -1,7 +1,14 @@
 import React from "react";
 import { IconProps } from "../../../types/interfaces/IconProps";
 
-export const LiveDemo = ({ width, height, color, style }: IconProps) => {
+export const LiveDemo = ({
+  width,
+  height,
+  color,
+  style,
+  onMouseEnter,
+  onMouseLeave,
+}: IconProps) => {
   return (
     <svg
       width={width}
@@ -11,6 +18,8 @@ export const LiveDemo = ({ width, height, color, style }: IconProps) => {
       className="icon"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       <path
         d="M512.4 507.9m-232.1 0a232.1 232.1 0 1 0 464.2 0 232.1 232.1 0 1 0-464.2 0Z"

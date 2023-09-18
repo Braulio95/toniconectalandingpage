@@ -1,18 +1,28 @@
 import React from "react";
 import { IconProps } from "../../../types/interfaces/IconProps";
 
-export const Linkedin = ({ height, width, color }: IconProps) => {
+export const Linkedin = ({
+  height,
+  width,
+  style,
+  color,
+  onMouseEnter,
+  onMouseLeave,
+}: IconProps) => {
   return (
     <svg
       fill={color}
       height={height}
       width={width}
+      style={style}
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       viewBox="-271 283.9 256 235.1"
       xmlSpace="preserve"
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       <g>
         <rect x="-264.4" y="359.3" width="49.9" height="159.7" />

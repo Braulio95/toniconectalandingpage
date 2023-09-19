@@ -70,10 +70,7 @@ function NavBarComp({ pageName, tabItems }: NavBarProps) {
                     as={HashLink}
                     to={`#${routePath}`}
                     style={{
-                      color:
-                        id === activeTab
-                          ? colorPalette.strongestGreen
-                          : colorPalette.strongGreen,
+                      color: colorPalette.strongestGreen,
                     }}
                   >
                     {label}

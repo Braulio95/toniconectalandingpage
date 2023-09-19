@@ -9,7 +9,7 @@ import { MAIN_ROUTES } from "../constants/routes";
 import { Curriculum } from "../modules/curriculum/Curriculum";
 
 export const MainRoutes = () => {
-  const { HOME, BLOG, PORTFOLIO, CURRICULUM } = MAIN_ROUTES;
+  const { HOME, PORTFOLIO, CURRICULUM } = MAIN_ROUTES;
   const navTabs = [
     {
       id: 1,
@@ -26,11 +26,6 @@ export const MainRoutes = () => {
       id: 3,
       label: "Curriculum",
       routePath: CURRICULUM,
-    },
-    {
-      id: 4,
-      label: "Blog",
-      routePath: BLOG,
     },
   ];
 

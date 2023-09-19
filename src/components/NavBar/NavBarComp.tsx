@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -8,6 +9,36 @@ import { colorPalette } from "../../styles/partials/colors";
 import { HashLink } from "react-router-hash-link";
 
 function NavBarComp({ pageName, tabItems }: NavBarProps) {
+  const [activeTab, setActiveTab] = useState(1);
+
+  useEffect(() => {
+    if (tabItems && tabItems.length) {
+      const handleScroll = () => {
+        const scrollPosition = window.scrollY;
+        const matchingTab = tabItems.find(({ routePath }) => {
+          const target = document.querySelector(`#${routePath}`);
+          if (target instanceof HTMLElement) {
+            const targetPosition = target.offsetTop;
+            return (
+              scrollPosition >= targetPosition &&
+              scrollPosition < targetPosition + target.clientHeight
+            );
+          }
+          return false;
+        });
+
+        if (matchingTab) {
+          setActiveTab(matchingTab.id);
+        }
+      };
+
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
+  }, [activeTab, tabItems]);
+
   return (
     <Navbar
       expand="lg"
@@ -30,7 +61,7 @@ function NavBarComp({ pageName, tabItems }: NavBarProps) {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="justify-content-end">
           {tabItems && tabItems.length && (
-            <Nav variant="underline">
+            <Nav variant="underline" activeKey={activeTab}>
               {tabItems.map(({ id, label, routePath }) => (
                 <Nav.Item key={id}>
                   <Nav.Link
@@ -38,7 +69,12 @@ function NavBarComp({ pageName, tabItems }: NavBarProps) {
                     eventKey={id}
                     as={HashLink}
                     to={`#${routePath}`}
-                    style={{ color: colorPalette.strongestGreen }}
+                    style={{
+                      color:
+                        id === activeTab
+                          ? colorPalette.strongestGreen
+                          : colorPalette.strongGreen,
+                    }}
                   >
                     {label}
                   </Nav.Link>

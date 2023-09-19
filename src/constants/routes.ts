@@ -1,6 +1,5 @@
 const mainRouter = () => ({
-    HOME: '',
-    BLOG: 'blog',
+    HOME: 'home',
     CONTACT: 'contact',
     PORTFOLIO: 'portfolio',
     CURRICULUM: 'curriculum'

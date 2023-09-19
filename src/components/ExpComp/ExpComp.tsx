@@ -19,9 +19,9 @@ export const ExpComp = ({ experiences, type }: ExpProps) => {
           </h3>
         </Col>
       </Row>
-      {experiences.map(({ date, company, role, description }) => {
+      {experiences.map(({ id, date, company, role, description }) => {
         return (
-          <Row>
+          <Row key={id}>
             <Col
               xs={2}
               xxl={6}

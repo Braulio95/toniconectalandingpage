@@ -32,11 +32,12 @@ export const MainRoutes = () => {
   return (
     <BrowserRouter>
       {/* Header and navigation */}
-      {/* Main Content */}
       <NavBarComp pageName="Braulio Blog" tabItems={navTabs} />
+      {/* Main Content */}
       <Home />
       <Portfolio />
       <Curriculum />
+      {/* Footer and contact info */}
       <Footer />
     </BrowserRouter>
   );

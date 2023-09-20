@@ -6,6 +6,7 @@ import { StrongComp } from "../StrongComp/StrongComp";
 import { useState } from "react";
 import { CardCompProps } from "../../types/interfaces/CardCompProps";
 import { ImageNotIcon } from "../Icons/ImageNotIcon/ImageNotIcon";
+import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
 function CardComp({
   id,
@@ -37,6 +38,10 @@ function CardComp({
   const handleImageLoadError = () => {
     setImageLoadError(true);
   };
+
+  const renderTooltip = (message: string) => (
+    <Tooltip id="button-tooltip">{message}</Tooltip>
+  );
   return (
     <Card
       key={id}
@@ -74,36 +79,48 @@ function CardComp({
             alignItems: "center",
           }}
         >
-          <a href={linkLiveDemo}>
-            <LiveDemo
-              onMouseEnter={handleLiveDemoMouseEnter}
-              onMouseLeave={handleLiveDemoMouseLeave}
-              width={"40px"}
-              height={"40px"}
-              color={colorPalette.strongestGreen}
-              style={{
-                marginInline: "4px",
-                cursor: "pointer",
-                transform: LiveDemoHovered ? "scale(1.25)" : "scale(1)",
-                transition: "transform 0.3s ease",
-              }}
-            />
-          </a>
-          {LinkGitHubRepo ? (
-            <a href={LinkGitHubRepo}>
-              <GithubIcon
-                onMouseEnter={GithubDemoMouseEnter}
-                onMouseLeave={GithubDemoMouseLeave}
-                width="28px"
-                height="32px"
+          <OverlayTrigger
+            placement="bottom"
+            delay={{ show: 200, hide: 200 }}
+            overlay={renderTooltip("See live demo")}
+          >
+            <a href={linkLiveDemo}>
+              <LiveDemo
+                onMouseEnter={handleLiveDemoMouseEnter}
+                onMouseLeave={handleLiveDemoMouseLeave}
+                width={"40px"}
+                height={"40px"}
                 color={colorPalette.strongestGreen}
                 style={{
+                  marginInline: "4px",
                   cursor: "pointer",
-                  transform: GithubHovered ? "scale(1.25)" : "scale(1)",
+                  transform: LiveDemoHovered ? "scale(1.25)" : "scale(1)",
                   transition: "transform 0.3s ease",
                 }}
               />
             </a>
+          </OverlayTrigger>
+          {LinkGitHubRepo ? (
+            <OverlayTrigger
+              placement="bottom"
+              delay={{ show: 200, hide: 200 }}
+              overlay={renderTooltip("See GitHub repo")}
+            >
+              <a href={LinkGitHubRepo}>
+                <GithubIcon
+                  onMouseEnter={GithubDemoMouseEnter}
+                  onMouseLeave={GithubDemoMouseLeave}
+                  width="28px"
+                  height="32px"
+                  color={colorPalette.strongestGreen}
+                  style={{
+                    cursor: "pointer",
+                    transform: GithubHovered ? "scale(1.25)" : "scale(1)",
+                    transition: "transform 0.3s ease",
+                  }}
+                />
+              </a>
+            </OverlayTrigger>
           ) : (
             <></>
           )}

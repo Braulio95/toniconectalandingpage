@@ -10,41 +10,28 @@ export const Curriculum = () => {
       id: 1,
       date: "Feb 2023 - Aug 2024",
       company: "The ksquare group",
-      role: "Developer",
+      role: "JavaScript developer trainee",
       description:
-        "lorem asdasdasdasdasdasdas sdfffffff sdfsdf sfsf sdfsdfsdfsdf sdfskldjfksjdfs sdlkfjskldfsklfjsfd adasdasdasdasdas",
+        "Back and front end developer with experience in the PERN stack (Postgres, Express, React, NodeJs).",
     },
     {
       id: 2,
-      date: "Feb 2023 - Aug 2024",
-      company: "Company XYZ",
-      role: "Designer",
-      description: "lorem ipsum dolor sit amet",
-    },
-    {
-      id: 3,
-      date: "Feb 2023 - Aug 2024",
-      company: "Tech Solutions Inc.",
-      role: "Software Engineer",
-      description: "consectetur adipiscing elit",
-    },
-    {
-      id: 4,
-      date: "Feb 2023 - Aug 2024",
-      company: "ABC Corporation",
-      role: "Project Manager",
-      description: "sed do eiusmod tempor incididunt",
+      date: "Oct 2020 - Jul 2022",
+      company: "PEMEX: Exploración y Producción",
+      role: "Geophycist: Seismic interpreter",
+      description:
+        "Make interpretations of structural geology in the Ku Maloob Zaap fields.",
     },
   ];
 
   const education = [
     {
       id: 1,
-      date: "Feb 2023 - Aug 2024",
-      company: "The ksquare group",
-      role: "Developer",
+      date: "Aug 2014 - Jun 2020",
+      company: "Universidad Autónoma del Carmen",
+      role: "Bachelor in geophysical engineering",
       description:
-        "lorem asdasdasdasdasdasdas sdfffffff sdfsdf sfsf sdfsdfsdfsdf sdfskldjfksjdfs sdlkfjskldfsklfjsfd adasdasdasdasdas",
+        "Professional who, based on his knowledge of mathematics, physics, and geology, develops methods and techniques to explore our planet.",
     },
   ];
   return (

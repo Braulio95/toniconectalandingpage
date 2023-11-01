@@ -4,7 +4,10 @@ import { ParticleBg } from "./components/ParticleBg/ParticleBg";
 
 function App() {
   return (
-    <div className="App" style={{ position: "relative" }}>
+    <div
+      className="App"
+      style={{ position: "relative", fontFamily: "Roboto Mono" }}
+    >
       <ParticleBg />
       <MainRoutes />
     </div>

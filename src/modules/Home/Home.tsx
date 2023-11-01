@@ -5,18 +5,14 @@ import Row from "react-bootstrap/Row";
 import Image from "react-bootstrap/Image";
 import { colorPalette } from "../../styles/partials/colors";
 import { StrongComp } from "../../components/StrongComp/StrongComp";
+import HomeImg from "../../assets/homeImg/iphone-hd-png-iphone-apple-png-file-550.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export const Home = () => {
   const headingStyle = {
     fontWeight: 400,
     fontSize: "2rem",
-    color: colorPalette.strongestAzure,
-  };
-
-  const subHeadingStyle = {
-    fontWeight: "lighter",
-    fontSize: "1.2rem",
+    color: "white",
   };
 
   return (
@@ -51,25 +47,11 @@ export const Home = () => {
             }}
           >
             <h1 style={headingStyle}>
-              Hi, my name is{" "}
-              <StrongComp color={colorPalette.strongestAzure}>
-                Braulio Estrada
+              Transormando talleres en{" "}
+              <StrongComp color={colorPalette.midAzure}>
+                Negocios Digitalmente Exitosos
               </StrongComp>
-              , I am a web developer in Mexico and I offer my web services in{" "}
-              <StrongComp color={colorPalette.strongestAzure}>
-                Front-end
-              </StrongComp>{" "}
-              projects.
             </h1>
-            <h2
-              style={{
-                ...subHeadingStyle,
-                paddingBlock: "2rem",
-              }}
-            >
-              I help you to build your UI, getting more visibility and relevance
-              in the internet.
-            </h2>
           </Col>
           <Col
             lg={4}
@@ -81,7 +63,7 @@ export const Home = () => {
             }}
           >
             <Image
-              src="https://res.cloudinary.com/dkrco"
+              src={HomeImg}
               style={{
                 width: "400px",
                 height: "400px",

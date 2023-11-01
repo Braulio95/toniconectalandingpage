@@ -3,12 +3,14 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { NavBarProps } from "../../types/interfaces/NavBarProps";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { MAIN_ROUTES } from "../../constants/routes";
 import { colorPalette } from "../../styles/partials/colors";
 import { HashLink } from "react-router-hash-link";
+import Logo from "../../assets/navIcon/logo.png";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Image } from "react-bootstrap";
 
-function NavBarComp({ pageName, tabItems }: NavBarProps) {
+function NavBarComp({ tabItems }: NavBarProps) {
   const [activeTab, setActiveTab] = useState(1);
 
   useEffect(() => {
@@ -47,15 +49,8 @@ function NavBarComp({ pageName, tabItems }: NavBarProps) {
       sticky="top"
     >
       <Container fluid="xxl">
-        <Navbar.Brand
-          href={MAIN_ROUTES.HOME}
-          style={{
-            color: colorPalette.strongGreen,
-            fontSize: "1.5rem",
-            fontWeight: "900",
-          }}
-        >
-          {pageName}
+        <Navbar.Brand href={MAIN_ROUTES.HOME}>
+          <Image src={Logo} style={{ width: "180px" }} />
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -70,7 +65,7 @@ function NavBarComp({ pageName, tabItems }: NavBarProps) {
                     as={HashLink}
                     to={`#${routePath}`}
                     style={{
-                      color: colorPalette.strongestGreen,
+                      color: colorPalette.midAzure,
                     }}
                   >
                     {label}

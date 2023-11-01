@@ -10,7 +10,7 @@ export const ExpComp = ({ experiences, type }: ExpProps) => {
         <Col style={{ textAlign: "center" }}>
           <h3
             style={{
-              color: colorPalette.strongGreen,
+              color: colorPalette.strongAzure,
               fontSize: "2rem",
               paddingBottom: "1.5rem",
             }}
@@ -45,7 +45,7 @@ export const ExpComp = ({ experiences, type }: ExpProps) => {
             <Col xs={10} xxl={6} style={{ overflow: "auto" }}>
               <p
                 style={{
-                  color: colorPalette.strongGreen,
+                  color: colorPalette.strongAzure,
                   fontSize: "1.2rem",
                   fontWeight: 700,
                   marginBottom: 0,
@@ -55,7 +55,7 @@ export const ExpComp = ({ experiences, type }: ExpProps) => {
               </p>
               <p
                 style={{
-                  color: colorPalette.midGreen,
+                  color: colorPalette.midAzure,
                   fontSize: "1rem",
                   fontWeight: 600,
                   marginBottom: 0,

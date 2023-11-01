@@ -10,7 +10,7 @@ export const ContactCardComp = () => {
         width: "10rem",
         justifyContent: "center",
         padding: "4px",
-        backgroundColor: `${colorPalette.lighterGreen}`,
+        backgroundColor: `${colorPalette.midAzure}`,
       }}
     >
       <Row>
@@ -23,7 +23,7 @@ export const ContactCardComp = () => {
             <Linkedin
               width="100px"
               height="100px"
-              color={colorPalette.strongestGreen}
+              color={colorPalette.midAzure}
             />
           </a>
         </Col>

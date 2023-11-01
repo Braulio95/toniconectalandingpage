@@ -5,14 +5,13 @@ import Row from "react-bootstrap/Row";
 import Image from "react-bootstrap/Image";
 import { colorPalette } from "../../styles/partials/colors";
 import { StrongComp } from "../../components/StrongComp/StrongComp";
-import img from "../../assets/pngwing.com.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export const Home = () => {
   const headingStyle = {
     fontWeight: 400,
     fontSize: "2rem",
-    color: colorPalette.strongestGreen,
+    color: colorPalette.strongestAzure,
   };
 
   const subHeadingStyle = {
@@ -53,11 +52,11 @@ export const Home = () => {
           >
             <h1 style={headingStyle}>
               Hi, my name is{" "}
-              <StrongComp color={colorPalette.strongestGreen}>
+              <StrongComp color={colorPalette.strongestAzure}>
                 Braulio Estrada
               </StrongComp>
               , I am a web developer in Mexico and I offer my web services in{" "}
-              <StrongComp color={colorPalette.strongestGreen}>
+              <StrongComp color={colorPalette.strongestAzure}>
                 Front-end
               </StrongComp>{" "}
               projects.
@@ -82,7 +81,7 @@ export const Home = () => {
             }}
           >
             <Image
-              src={img}
+              src="https://res.cloudinary.com/dkrco"
               style={{
                 width: "400px",
                 height: "400px",

@@ -56,7 +56,7 @@ function CardComp({
         <ImageNotIcon
           width="180px"
           height="180px"
-          color={colorPalette.strongestGreen}
+          color={colorPalette.strongestAzure}
           style={{ margin: "0 auto", paddingBlock: "10%" }}
         />
       ) : (
@@ -69,7 +69,7 @@ function CardComp({
       )}
       <Card.Body style={{ display: "flex", maxHeight: "72px" }}>
         <Card.Title style={{ flexGrow: "1" }}>
-          <StrongComp color={colorPalette.strongGreen}>{title}</StrongComp>
+          <StrongComp color={colorPalette.strongAzure}>{title}</StrongComp>
         </Card.Title>
         <div
           style={{
@@ -90,7 +90,7 @@ function CardComp({
                 onMouseLeave={handleLiveDemoMouseLeave}
                 width={"40px"}
                 height={"40px"}
-                color={colorPalette.strongestGreen}
+                color={colorPalette.strongestAzure}
                 style={{
                   marginInline: "4px",
                   cursor: "pointer",
@@ -112,7 +112,7 @@ function CardComp({
                   onMouseLeave={GithubDemoMouseLeave}
                   width="28px"
                   height="32px"
-                  color={colorPalette.strongestGreen}
+                  color={colorPalette.strongestAzure}
                   style={{
                     cursor: "pointer",
                     transform: GithubHovered ? "scale(1.25)" : "scale(1)",

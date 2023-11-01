@@ -33,7 +33,7 @@ export const BlogEntrieComp = ({
             <h3
               className="entrie-title"
               style={{
-                color: colorPalette.strongGreen,
+                color: colorPalette.strongAzure,
                 fontWeight: "700",
               }}
             >

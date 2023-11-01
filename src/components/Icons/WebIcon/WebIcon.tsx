@@ -23,7 +23,7 @@ export const WebIcon = ({ width, height, color, style }: IconProps) => {
       />
       <path
         d="M213.3 752.8h298.8c5.5 0 10-4.5 10-10s-4.5-10-10-10H213.3c-8.5 0-15.4-6.9-15.4-15.4V524.6c0-5.5-4.5-10-10-10s-10 4.5-10 10v192.9c0.1 19.4 15.9 35.3 35.4 35.3z"
-        fill={colorPalette.lightGreen} //change for green
+        fill={colorPalette.lightAzure} //change for green
       />
       <path
         d="M235.5 271.8c-17.2 0-31.2 14-31.2 31.2s14 31.2 31.2 31.2 31.2-14 31.2-31.2-14-31.2-31.2-31.2z"

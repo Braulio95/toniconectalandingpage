@@ -9,16 +9,16 @@ export const LinkComp = ({ children, link }: LinkCompProps) => {
     paddingInline: "0.5rem",
     borderRadius: "5px",
     color: "white",
-    backgroundColor: colorPalette.strongGreen,
+    backgroundColor: colorPalette.strongAzure,
     textDecoration: "none",
     transition: "all 100ms",
   };
 
   const linkHoverStyle = {
-    color: colorPalette.strongestGreen,
+    color: colorPalette.strongestAzure,
     paddingInline: "0.5rem",
     borderRadius: "5px",
-    backgroundColor: colorPalette.lightGreen,
+    backgroundColor: colorPalette.lightAzure,
     textDecoration: "none",
     transition: "all 100ms",
   };

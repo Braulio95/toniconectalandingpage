@@ -5,12 +5,12 @@ import { StrongComp } from "../StrongComp/StrongComp";
 
 export const SubtitleComp = ({ children }: SubtitleCompProps) => {
   const subHeadingStyle = {
-    color: colorPalette.strongestGreen,
+    color: colorPalette.strongestAzure,
     fontWeight: "lighter",
   };
   return (
     <h2 style={subHeadingStyle}>
-      <StrongComp color={colorPalette.strongestGreen} children={children} />
+      <StrongComp color={colorPalette.strongestAzure} children={children} />
     </h2>
   );
 };

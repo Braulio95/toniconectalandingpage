@@ -1,11 +1,12 @@
 // Declare a constant enum for colorPalette (Figma) colors
 export const enum colorPalette {
     // Main Brand Colors
-    strongestGreen = '#758467',
-    strongGreen = '#819171',
-    midGreen = '#9CAF88',
-    lightGreen = '#CBD5C0',
-    lighterGreen = '#DFE6DA',
+    strongestAzure = '#272d81',
+    strongAzure = '##2d38c8',
+    midAzure = '#4b69e6',
+    lightAzure = '#9cb5f4',
+    lighterAzure = '#dee5fb',
+
     // Auxiliar Colors
     accentRed = '#EF565F',
     destructiveRed1 = '#DE1A1A',

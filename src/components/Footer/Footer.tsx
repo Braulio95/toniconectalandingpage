@@ -55,7 +55,7 @@ export const Footer = () => {
                     onMouseLeave={handleLinkedInMouseLeave}
                     height="25px"
                     width="25px"
-                    color={colorPalette.strongestGreen}
+                    color={colorPalette.strongestAzure}
                     style={{
                       marginInline: "4px",
                       cursor: "pointer",
@@ -78,7 +78,7 @@ export const Footer = () => {
                     onMouseLeave={GithubMouseLeave}
                     height="25px"
                     width="30px"
-                    color={colorPalette.strongestGreen}
+                    color={colorPalette.strongestAzure}
                     style={{
                       marginInline: "4px",
                       cursor: "pointer",

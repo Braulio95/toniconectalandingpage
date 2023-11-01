@@ -12,6 +12,11 @@ export const ParticleBg = () => {
       id="tsparticles"
       init={loadParticles}
       options={{
+        background: {
+          color: {
+            value: "#000000",
+          },
+        },
         fullScreen: {
           enable: true,
           zIndex: -1,
@@ -25,7 +30,7 @@ export const ParticleBg = () => {
             },
           },
           color: {
-            value: `${colorPalette.neutralGray3}`,
+            value: "ffffff",
           },
           shape: {
             type: "circle",
@@ -60,15 +65,15 @@ export const ParticleBg = () => {
           line_linked: {
             enable: true,
             distance: 150,
-            color: `${colorPalette.strongestGreen}`,
+            color: `ffffff`,
             opacity: 0.6,
             width: 1,
           },
           move: {
             enable: true,
-            speed: 2,
+            speed: 1,
             direction: "none",
-            random: false,
+            random: true,
             straight: false,
             out_mode: "out",
             bounce: false,

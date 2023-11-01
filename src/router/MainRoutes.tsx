@@ -14,11 +14,6 @@ export const MainRoutes = () => {
       label: "Home",
       routePath: HOME,
     },
-    {
-      id: 2,
-      label: "Sobre Nosotros",
-      routePath: HOME,
-    },
   ];
 
   return (

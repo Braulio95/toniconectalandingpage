@@ -49,7 +49,7 @@ function NavBarComp({ tabItems }: NavBarProps) {
       sticky="top"
     >
       <Container fluid="xxl">
-        <Navbar.Brand href={MAIN_ROUTES.HOME}>
+        <Navbar.Brand href={`#${MAIN_ROUTES.HOME}`}>
           <Image src={Logo} style={{ width: "180px" }} />
         </Navbar.Brand>
 

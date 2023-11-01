@@ -47,7 +47,7 @@ export const Home = () => {
             }}
           >
             <h1 style={headingStyle}>
-              Transormando talleres en{" "}
+              Transformando talleres en{" "}
               <StrongComp color={colorPalette.midAzure}>
                 Negocios Digitalmente Exitosos
               </StrongComp>

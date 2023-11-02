@@ -59,17 +59,17 @@ export const Home = () => {
             className="d-flex flex-column align-items-center justify-content-center"
             style={{
               margin: "0 auto",
-              overflow: "hidden",
             }}
           >
             <Image
               src={HomeImg}
               style={{
-                width: "400px",
-                height: "400px",
+                width: "291px",
+                height: "576px",
                 margin: "0 auto",
                 marginTop: "4px",
                 objectFit: "contain",
+                rotate: "-5deg",
               }}
             />
           </Col>

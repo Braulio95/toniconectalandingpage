@@ -22,13 +22,7 @@ export const MainRoutes = () => {
     <BrowserRouter>
       {/* Header and navigation */}
       <Helmet>
-        <meta charSet="utf-8" />
-        <title>ToniConecta</title>
         <link rel="canonical" href={ToniIcon}></link>
-        <meta
-          name="description"
-          content="ToniConecta, digitalizacion, talleres, celulares"
-        ></meta>
       </Helmet>
       <NavBarComp pageName="Braulio Blog" tabItems={navTabs} />
       {/* Main Content */}

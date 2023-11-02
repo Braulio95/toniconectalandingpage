@@ -13,7 +13,7 @@ export const MainRoutes = () => {
   const navTabs = [
     {
       id: 1,
-      label: "Home",
+      label: "Inicio",
       routePath: HOME,
     },
   ];

@@ -29,7 +29,7 @@ export const Footer = () => {
         <Container>
           <Row>
             <Col>
-              <SubtitleComp>Contact</SubtitleComp>
+              <SubtitleComp>Contacto</SubtitleComp>
             </Col>
           </Row>
           <Row style={{ height: "40%" }}>

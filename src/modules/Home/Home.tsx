@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 import Image from "react-bootstrap/Image";
 import { colorPalette } from "../../styles/partials/colors";
 import { StrongComp } from "../../components/StrongComp/StrongComp";
-import HomeImg from "../../assets/homeImg/iphone-hd-png-iphone-apple-png-file-550.png";
+import HomeImg from "../../assets/homeImg/giftoni.gif";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export const Home = () => {

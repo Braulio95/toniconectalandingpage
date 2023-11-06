@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { Home } from "../modules/Home/Home";
 //import { Blog } from "../modules/Blog/Blog";
@@ -10,6 +10,22 @@ import ToniIcon from "../assets/navIcon/logo.png";
 
 export const MainRoutes = () => {
   const { HOME } = MAIN_ROUTES;
+  const [isMobile, setIsMobile] = useState(
+    window.innerWidth <= window.innerHeight
+  );
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < window.innerHeight);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const navTabs = [
     {
       id: 1,
@@ -24,8 +40,17 @@ export const MainRoutes = () => {
       <Helmet>
         <link rel="canonical" href={ToniIcon}></link>
       </Helmet>
-      <NavBarComp pageName="Braulio Blog" tabItems={navTabs} />
+      <NavBarComp pageName="ToniConecta" tabItems={navTabs} />
       {/* Main Content */}
+      <h1 style={{ display: "none" }}>
+        Toni Conecta - Posicionar en Google numero 1 para talleres de reparacion
+        - SEO para talleres de reparacion
+      </h1>
+      <h2 style={{ display: "none" }}>
+        Toni Conecta - Aparecer numero 1 en Google para talleres de servicio
+        tecnico
+      </h2>
+
       <Home />
       {/* Footer and contact info */}
       <Footer />

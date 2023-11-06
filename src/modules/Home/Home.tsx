@@ -46,12 +46,7 @@ export const Home = () => {
               textAlign: "right",
             }}
           >
-            <h1 style={headingStyle}>
-              Transformando talleres en{" "}
-              <StrongComp color={colorPalette.midAzure}>
-                Negocios Digitalmente Exitosos
-              </StrongComp>
-            </h1>
+            <h1 style={headingStyle}>Tu taller #1 en google</h1>
           </Col>
           <Col
             lg={4}
@@ -73,6 +68,9 @@ export const Home = () => {
               }}
             />
           </Col>
+        </Row>
+        <Row>
+          <h3>Texto de prueba</h3>
         </Row>
       </Container>
     </Container>

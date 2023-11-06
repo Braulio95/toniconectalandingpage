@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { MainRoutes } from "./router/MainRoutes";
 import { ParticleBg } from "./components/ParticleBg/ParticleBg";
 

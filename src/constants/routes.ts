@@ -1,8 +1,8 @@
 const mainRouter = () => ({
-    HOME: 'home',
-    CONTACT: 'contact',
-    PORTFOLIO: 'portfolio',
-    CURRICULUM: 'curriculum'
+    HOME: 'inicio',
+    ABOUTUS: 'sobrenosotros',
+    TESTIMONIES: 'testimonios',
+    CONTACT: 'contacto'
 
 });
 export const MAIN_ROUTES = mainRouter();

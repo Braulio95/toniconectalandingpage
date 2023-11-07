@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import { ExpComp } from "../../components/ExpComp/ExpComp";
 import { SubtitleComp } from "../../components/SubtitleComp/SubtitleComp";
 
-export const Curriculum = () => {
+export const Testimonies = () => {
   const workExperience = [
     {
       id: 1,
@@ -24,21 +24,11 @@ export const Curriculum = () => {
     },
   ];
 
-  const education = [
-    {
-      id: 1,
-      date: "Aug 2014 - Jun 2020",
-      company: "Universidad Autónoma del Carmen",
-      role: "Bachelor in geophysical engineering",
-      description:
-        "Professional who, based on his knowledge of mathematics, physics, and geology, develops methods and techniques to explore our planet.",
-    },
-  ];
   return (
     <Container
-      id="curriculum"
+      id="testimonios"
       fluid="xxl"
-      className="home"
+      className="testimonios"
       style={{
         paddingInline: "5%",
         height: "100%",
@@ -47,12 +37,11 @@ export const Curriculum = () => {
       }}
     >
       <Row>
-        <Col xxl="12">
-          <SubtitleComp>Curriculum</SubtitleComp>
+        <Col xxl="12" style={{ display: "flex" }}>
+          <SubtitleComp>Anécdotas que impactan</SubtitleComp>
         </Col>
       </Row>
       <ExpComp experiences={workExperience} type="Work Experience" />
-      <ExpComp experiences={education} type="Education" />
     </Container>
   );
 };

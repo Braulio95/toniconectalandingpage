@@ -3,21 +3,29 @@ import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Image from "react-bootstrap/Image";
-import { colorPalette } from "../../styles/partials/colors";
-import { StrongComp } from "../../components/StrongComp/StrongComp";
 import HomeImg from "../../assets/homeImg/giftoni.gif";
+import number1 from "../../assets/homeImg/number1.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-export const Home = () => {
+interface HomeProps {
+  isMobile: boolean;
+}
+export const Home = ({ isMobile }: HomeProps) => {
   const headingStyle = {
     fontWeight: 400,
-    fontSize: "2rem",
+    fontSize: "4rem",
+    color: "white",
+  };
+
+  const headingStyleMobile = {
+    fontWeight: 600,
+    fontSize: "3rem",
     color: "white",
   };
 
   return (
     <Container
-      id="home"
+      id="inicio"
       fluid="xxl"
       className="home"
       style={{
@@ -34,24 +42,50 @@ export const Home = () => {
           height: "min-content",
         }}
       >
-        <Row>
+        <Row style={{ display: "flex" }}>
           <Col
             lg={8}
             xxl={8}
-            style={{
-              marginBlock: "5rem",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "right",
-              textAlign: "right",
-            }}
+            style={
+              isMobile
+                ? {
+                    marginBlock: "1rem",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    textAlign: "center",
+                  }
+                : {
+                    marginBlock: "5rem",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "right",
+                    textAlign: "right",
+                  }
+            }
           >
-            <h1 style={headingStyle}>
-              Transformando talleres en{" "}
-              <StrongComp color={colorPalette.midAzure}>
-                Negocios Digitalmente Exitosos
-              </StrongComp>
-            </h1>
+            <p style={isMobile ? headingStyleMobile : headingStyle}>
+              ¡Tu taller
+              <span
+                style={{
+                  color: "blue",
+                  fontWeight: 700,
+                  fontSize: "6rem",
+                }}
+              >
+                <Image
+                  src={number1}
+                  style={{
+                    width: `${160}px`,
+                    height: `${160}px`,
+                    margin: "0 auto",
+                    marginTop: "4px",
+                    objectFit: "contain",
+                  }}
+                />
+              </span>{" "}
+              en <span style={{ color: "#5c81eb" }}>Google</span>!
+            </p>
           </Col>
           <Col
             lg={4}
@@ -64,8 +98,8 @@ export const Home = () => {
             <Image
               src={HomeImg}
               style={{
-                width: "291px",
-                height: "576px",
+                width: `${970 * 0.35}px`,
+                height: `${1920 * 0.35}px`,
                 margin: "0 auto",
                 marginTop: "4px",
                 objectFit: "contain",

@@ -19,11 +19,6 @@ export const MainRoutes = ({ isMobile }: MainRoutesProps) => {
       routePath: HOME,
     },
     {
-      id: 2,
-      label: "Sobre nosotros",
-      routePath: ABOUTUS,
-    },
-    {
       id: 3,
       label: "Testimonios",
       routePath: TESTIMONIES,
@@ -50,7 +45,7 @@ export const MainRoutes = ({ isMobile }: MainRoutesProps) => {
       </h2>
       <Home isMobile={isMobile} />
       {/* Footer and contact info */}
-      <Testimonies />
+      <Testimonies isMobile={isMobile} />
       <Footer />
     </BrowserRouter>
   );

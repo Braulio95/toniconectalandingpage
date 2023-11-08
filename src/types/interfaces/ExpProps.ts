@@ -1,12 +1,11 @@
 interface Experience {
     id: number;
-    date: string;
-    company: string;
-    role: string;
+    autor: string;
     description: string;
+    img: string;
 }
 
 export interface ExpProps {
-    type: string
+    isMobile: boolean;
     experiences: Experience[]
 }

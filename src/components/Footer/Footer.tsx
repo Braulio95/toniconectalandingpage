@@ -29,7 +29,16 @@ export const Footer = () => {
         <Container>
           <Row>
             <Col>
-              <SubtitleComp>Contacto</SubtitleComp>
+              <span
+                style={{
+                  fontSize: "2rem",
+                  color: colorPalette.strongestAzure,
+                  fontWeight: "lighter",
+                  marginInline: "auto",
+                }}
+              >
+                Contacto
+              </span>
             </Col>
           </Row>
           <Row style={{ height: "40%" }}>

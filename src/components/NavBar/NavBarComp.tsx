@@ -11,50 +11,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Image } from "react-bootstrap";
 
 function NavBarComp({ tabItems }: NavBarProps) {
-  const [activeTab, setActiveTab] = useState(1);
-
-  useEffect(() => {
-    if (tabItems && tabItems.length) {
-      // Check if the 'tabItems' array exists and is not empty
-      // This condition ensures that the code runs only when there are tab items to work with.
-
-      const handleScroll = () => {
-        const scrollPosition = window.scrollY;
-        // Get the current vertical scroll position of the window.
-        const matchingTab = tabItems.find(({ routePath }) => {
-          // Use the 'find' method to search for a tab that matches the scroll position.
-          const target = document.querySelector(`#${routePath}`);
-          if (target instanceof HTMLElement) {
-            const targetPosition = target.offsetTop;
-            // Get the vertical offset position of the 'target' element from the top of the page.
-            return (
-              scrollPosition >= targetPosition &&
-              scrollPosition < targetPosition + target.clientHeight
-            );
-            // Check if the scroll position is within the range of the 'target' element.
-          }
-
-          return false;
-          // If 'target' is not a valid HTML element, return false.
-        });
-
-        if (matchingTab) {
-          // If a 'matchingTab' is found (i.e., a tab that is currently in view as the user scrolls),
-
-          setActiveTab(matchingTab.id);
-          // Set the active tab using the 'setActiveTab' function, likely to update the UI.
-        }
-      };
-
-      window.addEventListener("scroll", handleScroll);
-
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-        // Remove the 'scroll' event listener to avoid memory leaks.
-      };
-    }
-  }, [activeTab, tabItems]);
-
   return (
     <Navbar
       expand="lg"
@@ -70,7 +26,7 @@ function NavBarComp({ tabItems }: NavBarProps) {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="justify-content-end">
           {tabItems && tabItems.length && (
-            <Nav variant="underline" activeKey={activeTab}>
+            <Nav variant="underline">
               {tabItems.map(({ id, label, routePath }) => (
                 <Nav.Item key={id}>
                   <Nav.Link

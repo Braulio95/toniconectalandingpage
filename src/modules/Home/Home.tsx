@@ -97,14 +97,25 @@ export const Home = ({ isMobile }: HomeProps) => {
           >
             <Image
               src={HomeImg}
-              style={{
-                width: `${970 * 0.35}px`,
-                height: `${1920 * 0.35}px`,
-                margin: "0 auto",
-                marginTop: "4px",
-                objectFit: "contain",
-                rotate: "-5deg",
-              }}
+              style={
+                isMobile
+                  ? {
+                      width: `${970 * 0.3}px`,
+                      height: `${1920 * 0.3}px`,
+                      margin: "0 auto",
+                      marginTop: "4px",
+                      objectFit: "contain",
+                      rotate: "-2deg",
+                    }
+                  : {
+                      width: `${970 * 0.35}px`,
+                      height: `${1920 * 0.35}px`,
+                      margin: "0 auto",
+                      marginTop: "4px",
+                      objectFit: "contain",
+                      rotate: "-5deg",
+                    }
+              }
             />
           </Col>
         </Row>

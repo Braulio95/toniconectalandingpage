@@ -35,6 +35,7 @@ export const MainRoutes = ({ isMobile }: MainRoutesProps) => {
       {/* Header and navigation */}
       <NavBarComp pageName="Braulio Blog" tabItems={navTabs} />
       {/* Main Content */}
+      {/* Tags for SEO */}
       <h1 style={{ display: "none" }}>
         Toni Conecta - Posicionar en Google numero 1 para talleres de reparacion
         - SEO para talleres de reparacion

@@ -9,8 +9,9 @@ import { HashLink } from "react-router-hash-link";
 import Logo from "../../assets/navIcon/logo.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Image } from "react-bootstrap";
+import { WhatsAppIcon } from "../Icons/WhatsAppIcon/WhatsAppIcon";
 
-function NavBarComp({ tabItems }: NavBarProps) {
+function NavBarComp({ tabItems, isMobile }: NavBarProps) {
   return (
     <Navbar
       expand="lg"
@@ -22,8 +23,17 @@ function NavBarComp({ tabItems }: NavBarProps) {
         <Navbar.Brand href={`#${MAIN_ROUTES.HOME}`}>
           <Image src={Logo} style={{ width: "180px" }} />
         </Navbar.Brand>
-
+        {isMobile && (
+          <a
+            href="https://api.whatsapp.com/send?phone=5550301869"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <WhatsAppIcon width="30px" height="30px" color="#5c81eb" />
+          </a>
+        )}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
         <Navbar.Collapse className="justify-content-end">
           {tabItems && tabItems.length && (
             <Nav variant="underline">

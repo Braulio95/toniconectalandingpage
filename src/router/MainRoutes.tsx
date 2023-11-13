@@ -29,8 +29,12 @@ export const MainRoutes = ({ isMobile }: MainRoutesProps) => {
   return (
     <BrowserRouter>
       {/* Header and navigation */}
-      <WhatsAppScrollButton />
-      <NavBarComp pageName="Braulio Blog" tabItems={navTabs} />
+      {isMobile === false && <WhatsAppScrollButton />}
+      <NavBarComp
+        pageName="Braulio Blog"
+        tabItems={navTabs}
+        isMobile={isMobile}
+      />
       {/* Main Content */}
       {/* Tags for SEO */}
       <h1 style={{ display: "none" }}>

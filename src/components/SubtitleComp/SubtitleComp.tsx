@@ -4,7 +4,7 @@ import { SubtitleCompProps } from "../../types/interfaces/SubtitleCompProps";
 export const SubtitleComp = ({ children }: SubtitleCompProps) => {
   const subHeadingStyle = {
     color: "#5c81eb",
-    fontSize: "4rem",
+    fontSize: "3rem",
 
     marginInline: "auto",
   };

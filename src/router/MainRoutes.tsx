@@ -5,6 +5,7 @@ import { Footer } from "../components/Footer/Footer";
 import NavBarComp from "../components/NavBar/NavBarComp";
 import { MAIN_ROUTES } from "../constants/routes";
 import { Testimonies } from "../modules/Testimonies/Testimonies";
+import { WhatsAppScrollButton } from "../components/WhatsAppScrollButton/WhatsAppScrollButton";
 
 interface MainRoutesProps {
   isMobile: boolean;
@@ -13,11 +14,6 @@ interface MainRoutesProps {
 export const MainRoutes = ({ isMobile }: MainRoutesProps) => {
   const { HOME, ABOUTUS, TESTIMONIES, CONTACT } = MAIN_ROUTES;
   const navTabs = [
-    {
-      id: 1,
-      label: "Inicio",
-      routePath: HOME,
-    },
     {
       id: 3,
       label: "Testimonios",
@@ -33,6 +29,7 @@ export const MainRoutes = ({ isMobile }: MainRoutesProps) => {
   return (
     <BrowserRouter>
       {/* Header and navigation */}
+      <WhatsAppScrollButton />
       <NavBarComp pageName="Braulio Blog" tabItems={navTabs} />
       {/* Main Content */}
       {/* Tags for SEO */}
@@ -47,7 +44,7 @@ export const MainRoutes = ({ isMobile }: MainRoutesProps) => {
       <Home isMobile={isMobile} />
       {/* Footer and contact info */}
       <Testimonies isMobile={isMobile} />
-      <Footer />
+      <Footer isMobile={isMobile} />
     </BrowserRouter>
   );
 };

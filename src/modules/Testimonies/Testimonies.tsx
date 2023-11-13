@@ -14,10 +14,10 @@ export const Testimonies = ({ isMobile }: TestimoniesProps) => {
   const workExperience = [
     {
       id: 1,
-      autor: "- Mario, Director de Ventas",
+      autor: "- Pedro, Director de Ventas.",
       description:
-        "“El cotizador en línea que ahora tenemos en nuestra página web es sin duda alguna el mejor CRM/Software para obtener más clientes y ventas”",
-      img: centroDeServicioApple,
+        "“Lo que nos hemos ahorrado en pagar anuncios comparado con la inversión en nuestro tráfico orgánico y cuántas ventas nos ha generado hace que valga la pena sin duda alguna”",
+      img: caremobile,
     },
     {
       id: 2,
@@ -28,17 +28,18 @@ export const Testimonies = ({ isMobile }: TestimoniesProps) => {
     },
     {
       id: 3,
+      autor: "- Mario, Director de Ventas",
+      description:
+        "“El cotizador en línea que ahora tenemos en nuestra página web es sin duda alguna el mejor CRM/Software para obtener más clientes y ventas”",
+      img: centroDeServicioApple,
+    },
+
+    {
+      id: 4,
       autor: "- Karina, Gerente de Ventas.",
       description:
         "“La manera en la que ahora estamos posicionados en Google y las consultas que hacen a nuestro negocio de reparaciones nos ha ayudado a sobrevivir la cuarentena”",
       img: servicioHuawei,
-    },
-    {
-      id: 4,
-      autor: "- Pedro, Director de Ventas.",
-      description:
-        "“Lo que nos hemos ahorrado en pagar anuncios comparado con la inversión en nuestro tráfico orgánico y cuántas ventas nos ha generado hace que valga la pena sin duda alguna”",
-      img: caremobile,
     },
   ];
 
@@ -56,7 +57,7 @@ export const Testimonies = ({ isMobile }: TestimoniesProps) => {
     >
       <Row>
         <Col xxl="12" style={{ display: "flex" }}>
-          <SubtitleComp>Anécdotas que impactan</SubtitleComp>
+          <SubtitleComp>Lo que nuestros clientes opinan</SubtitleComp>
         </Col>
       </Row>
       <ExpComp experiences={workExperience} isMobile={isMobile} />

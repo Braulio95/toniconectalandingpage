@@ -6,7 +6,11 @@ import { InstagramIcon } from "../Icons/InstagramIcon/InstagramIcon";
 import { WhatsAppIcon } from "../Icons/WhatsAppIcon/WhatsAppIcon";
 import { EmailIcon } from "../Icons/EmailIcon/EmailIcon";
 
-export const Footer = () => {
+interface FooterProps {
+  isMobile: boolean;
+}
+
+export const Footer = ({ isMobile }: FooterProps) => {
   const [LinkedInHovered, setLinkedInHovered] = useState(false);
   const [InstagramHovered, setInstagramHovered] = useState(false);
   const [WhatsHovered, setWhatsHovered] = useState(false);
@@ -73,8 +77,15 @@ export const Footer = () => {
               </span>
             </Col>
           </Row>
-          <Row style={{ height: "40%" }}>
-            <Col sm={3} style={{ padding: "16px" }}>
+          <Row
+            style={{
+              width: isMobile ? "100%" : "60%",
+              height: "40%",
+              margin: "auto",
+              paddingBlock: "2rem",
+            }}
+          >
+            <Col style={{ padding: "1rem" }}>
               <OverlayTrigger
                 placement="bottom"
                 delay={{ show: 200, hide: 200 }}
@@ -88,8 +99,8 @@ export const Footer = () => {
                   <Linkedin
                     onMouseEnter={handleLinkedInMouseEnter}
                     onMouseLeave={handleLinkedInMouseLeave}
-                    height="25px"
-                    width="25px"
+                    height="35px"
+                    width="35px"
                     color={colorPalette.strongestAzure}
                     style={{
                       marginInline: "4px",
@@ -101,7 +112,7 @@ export const Footer = () => {
                 </a>
               </OverlayTrigger>
             </Col>
-            <Col sm={3} style={{ padding: "16px" }}>
+            <Col style={{ padding: "1rem" }}>
               <OverlayTrigger
                 placement="bottom"
                 delay={{ show: 200, hide: 200 }}
@@ -115,8 +126,8 @@ export const Footer = () => {
                   <InstagramIcon
                     onMouseEnter={handleInstagramMouseEnter}
                     onMouseLeave={handleInstagramMouseLeave}
-                    height="25px"
-                    width="25px"
+                    height="35px"
+                    width="35px"
                     color={colorPalette.strongestAzure}
                     style={{
                       marginInline: "4px",
@@ -128,7 +139,7 @@ export const Footer = () => {
                 </a>
               </OverlayTrigger>
             </Col>
-            <Col sm={3} style={{ padding: "16px" }}>
+            <Col style={{ padding: "1rem" }}>
               <OverlayTrigger
                 placement="bottom"
                 delay={{ show: 200, hide: 200 }}
@@ -142,8 +153,8 @@ export const Footer = () => {
                   <WhatsAppIcon
                     onMouseEnter={handleWhatsMouseEnter}
                     onMouseLeave={handleWhatsMouseLeave}
-                    height="25px"
-                    width="25px"
+                    height="35px"
+                    width="35px"
                     color={colorPalette.strongestAzure}
                     style={{
                       marginInline: "4px",
@@ -155,7 +166,7 @@ export const Footer = () => {
                 </a>
               </OverlayTrigger>
             </Col>
-            <Col sm={3} style={{ padding: "16px" }}>
+            <Col style={{ padding: "1rem" }}>
               <OverlayTrigger
                 placement="bottom"
                 delay={{ show: 200, hide: 200 }}
@@ -169,8 +180,8 @@ export const Footer = () => {
                   <EmailIcon
                     onMouseEnter={handleEmailMouseEnter}
                     onMouseLeave={handleEmailMouseLeave}
-                    height="25px"
-                    width="25px"
+                    height="35px"
+                    width="35px"
                     color={colorPalette.strongestAzure}
                     style={{
                       marginInline: "4px",

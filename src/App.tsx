@@ -4,17 +4,15 @@ import { ParticleBg } from "./components/ParticleBg/ParticleBg";
 
 function App() {
   const [isMobile, setIsMobile] = useState(
-    window.innerWidth <= window.innerHeight
+    window.innerWidth / window.innerHeight <= 3 / 4
   );
 
-  // Function to handle window resize events and determine if the screen has a mobile-like (vertical) or desktop-like (horizontal) aspect ratio.
+  // Function to handle window resize events and determine if the screen has a mobile-like (vertical) or desktop-like (horizontal) aspect ratio
   const handleResize = () => {
-    setIsMobile(window.innerWidth <= window.innerHeight);
+    setIsMobile(window.innerWidth / window.innerHeight <= 3 / 4);
   };
-
   useEffect(() => {
     window.addEventListener("resize", handleResize);
-
     return () => {
       window.removeEventListener("resize", handleResize);
     };

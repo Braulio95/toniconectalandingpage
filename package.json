@@ -4,10 +4,6 @@
   "private": true,
   "homepage": "https://Braulio95.github.io/toniconectalandingpage",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
     "@types/node": "^16.18.48",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
@@ -51,6 +47,10 @@
     ]
   },
   "devDependencies": {
-    "@types/react-router-hash-link": "^2.4.6"
+    "@types/react-router-hash-link": "^2.4.6",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2"
   }
 }

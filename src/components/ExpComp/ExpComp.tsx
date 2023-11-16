@@ -1,32 +1,44 @@
 import React from "react";
-import { Col, Container, Image, Row } from "react-bootstrap";
 import { ExpProps } from "../../types/interfaces/ExpProps";
 
 export const ExpComp = ({ experiences, isMobile }: ExpProps) => {
   if (isMobile) {
     return (
-      <Container>
+      <div>
         {experiences.map(({ id, autor, description, img }, index) => {
+          const isImageOnLeft = index % 2 === 0;
+
           return (
-            <Row key={id}>
-              <Col
-                xs={12}
-                s={6}
+            <div
+              key={id}
+              style={{
+                display: "flex",
+                marginBottom: isImageOnLeft ? "0.5rem" : "6rem",
+              }}
+            >
+              <div
                 style={{
-                  textAlign: "center",
-                  marginBottom: "0.5rem",
+                  textAlign: isImageOnLeft ? "center" : "right",
+                  flex: "1",
+                  marginBottom: isImageOnLeft ? "0.5rem" : "3rem",
                 }}
               >
-                <Image src={img} style={{ width: "200px", margin: "0 auto" }} />
-              </Col>
-              <Col
-                xs={12}
-                s={6}
+                <img
+                  src={img}
+                  alt={description}
+                  style={{
+                    width: isImageOnLeft ? "200px" : "300px",
+                    margin: "0 auto",
+                  }}
+                />
+              </div>
+              <div
                 style={{
                   display: "flex",
                   flexDirection: "column",
                   overflow: "auto",
-                  marginBottom: "3rem",
+                  flex: "1",
+                  textAlign: isImageOnLeft ? "left" : "right",
                 }}
               >
                 <p
@@ -49,102 +61,75 @@ export const ExpComp = ({ experiences, isMobile }: ExpProps) => {
                 >
                   {autor}
                 </p>
-              </Col>
-            </Row>
+              </div>
+            </div>
           );
         })}
-      </Container>
-    );
-  } else {
-    return (
-      <Container style={{ marginTop: "4rem" }}>
-        {experiences.map(({ id, autor, description, img }, index) => {
-          const isImageOnLeft = index % 2 === 0;
-          return (
-            <Row key={id} style={{ display: "flex", marginBottom: "6rem" }}>
-              <Col
-                s={6}
-                style={{
-                  textAlign: "right",
-                }}
-              >
-                {isImageOnLeft ? (
-                  <Image
-                    src={img}
-                    style={{ width: "200px", margin: "0 auto" }}
-                  />
-                ) : (
-                  <div>
-                    <p
-                      style={{
-                        color: "white",
-                        fontSize: "1rem",
-                        fontWeight: 400,
-                        marginBottom: 0,
-                      }}
-                    >
-                      {description}
-                    </p>
-                    <p
-                      style={{
-                        color: "white",
-                        fontSize: "1.2rem",
-                        fontWeight: 700,
-                        marginBottom: 0,
-                      }}
-                    >
-                      {autor}
-                    </p>
-                  </div>
-                )}
-              </Col>
-              <Col
-                s={6}
-                style={
-                  isImageOnLeft
-                    ? {
-                        display: "flex",
-                        flexDirection: "column",
-                        overflow: "auto",
-                        marginBlock: "auto",
-                      }
-                    : { textAlign: "left" }
-                }
-              >
-                {isImageOnLeft ? (
-                  <>
-                    <p
-                      style={{
-                        color: "white",
-                        fontSize: "1rem",
-                        fontWeight: 400,
-                        marginBottom: 0,
-                      }}
-                    >
-                      {description}
-                    </p>
-                    <p
-                      style={{
-                        color: "white",
-                        fontSize: "1.2rem",
-                        fontWeight: 700,
-                        marginBottom: 0,
-                      }}
-                    >
-                      {autor}
-                    </p>
-                  </>
-                ) : (
-                  <Image
-                    src={img}
-                    style={{ width: "300px", marginBlock: "0 auto" }}
-                  />
-                )}
-              </Col>
-            </Row>
-          );
-        })}
-      </Container>
+      </div>
     );
   }
+  return (
+    <div>
+      {experiences.map(({ id, autor, description, img }, index) => {
+        const isImageOnLeft = index % 2 === 0;
+
+        return (
+          <div
+            key={id}
+            style={{
+              display: "flex",
+              marginBottom: isImageOnLeft ? "0.5rem" : "6rem",
+            }}
+          >
+            <div
+              style={{
+                textAlign: isImageOnLeft ? "center" : "right",
+                flex: "1",
+                marginBottom: isImageOnLeft ? "0.5rem" : "3rem",
+              }}
+            >
+              <img
+                src={img}
+                alt={description}
+                style={{
+                  width: isImageOnLeft ? "200px" : "300px",
+                  margin: "0 auto",
+                }}
+              />
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                overflow: "auto",
+                flex: "1",
+                textAlign: isImageOnLeft ? "left" : "right",
+              }}
+            >
+              <p
+                style={{
+                  color: "white",
+                  fontSize: "1rem",
+                  fontWeight: 400,
+                  marginBottom: 0,
+                }}
+              >
+                {description}
+              </p>
+              <p
+                style={{
+                  color: "white",
+                  fontSize: "1.2rem",
+                  fontWeight: 700,
+                  marginBottom: 0,
+                }}
+              >
+                {autor}
+              </p>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
 };

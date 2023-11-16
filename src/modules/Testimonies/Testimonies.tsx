@@ -1,6 +1,4 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
-import Container from "react-bootstrap/Container";
 import { ExpComp } from "../../components/ExpComp/ExpComp";
 import { SubtitleComp } from "../../components/SubtitleComp/SubtitleComp";
 import centroDeServicioApple from "../../assets/testimonies/centrodeservicio.png";
@@ -44,9 +42,8 @@ export const Testimonies = ({ isMobile }: TestimoniesProps) => {
   ];
 
   return (
-    <Container
+    <div
       id="testimonios"
-      fluid="xxl"
       className="testimonios"
       style={{
         paddingInline: "5%",
@@ -55,12 +52,12 @@ export const Testimonies = ({ isMobile }: TestimoniesProps) => {
         marginBottom: "8%",
       }}
     >
-      <Row>
-        <Col xxl="12" style={{ display: "flex" }}>
+      <div>
+        <div style={{ display: "flex" }}>
           <SubtitleComp>Lo que nuestros clientes opinan</SubtitleComp>
-        </Col>
-      </Row>
+        </div>
+      </div>
       <ExpComp experiences={workExperience} isMobile={isMobile} />
-    </Container>
+    </div>
   );
 };

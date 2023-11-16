@@ -5,20 +5,14 @@ import { colorPalette } from "../../styles/partials/colors";
 import { HashLink } from "react-router-hash-link";
 import Logo from "../../assets/navIcon/logo.png";
 import { WhatsAppIcon } from "../Icons/WhatsAppIcon/WhatsAppIcon";
+import "./NavBarComp.css";
 
 function NavBarComp({ tabItems, isMobile }: NavBarProps) {
   return (
-    <nav
-      className="navbar bg-body-tertiary"
-      style={{
-        boxShadow: `0px 6px 12px rgba(20, 63, 156, 0.2)`,
-        position: "sticky",
-        top: 0,
-      }}
-    >
-      <div className="container-fluid">
-        <a href={`#${MAIN_ROUTES.HOME}`}>
-          <img src={Logo} alt="Logo" style={{ width: "180px" }} />
+    <nav className="navbar">
+      <div className="navbar-container">
+        <a className="navbar-logo-container" href={`#${MAIN_ROUTES.HOME}`}>
+          <img className="navbar-logo" src={Logo} alt="toniconecta-logo" />
         </a>
         {isMobile ? (
           <Fragment>
@@ -42,10 +36,7 @@ function NavBarComp({ tabItems, isMobile }: NavBarProps) {
             </button>
           </Fragment>
         ) : (
-          <div
-            className="collapse navbar-collapse justify-content-end"
-            id="navbarNav"
-          >
+          <div className="tabs-container" id="navbarNav">
             {tabItems && tabItems.length && (
               <ul className="navbar-nav">
                 {tabItems.map(({ id, label, routePath }) => (

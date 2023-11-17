@@ -12,7 +12,7 @@ interface MainRoutesProps {
 }
 
 export const MainRoutes = ({ isMobile }: MainRoutesProps) => {
-  const { HOME, ABOUTUS, TESTIMONIES, CONTACT } = MAIN_ROUTES;
+  const { TESTIMONIES, CONTACT } = MAIN_ROUTES;
   const navTabs = [
     {
       id: 3,

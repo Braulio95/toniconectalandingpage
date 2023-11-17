@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Linkedin } from "../Icons/LinkedinIcon/Linkedin";
 import { colorPalette } from "../../styles/partials/colors";
-import { Col, Container, OverlayTrigger, Row, Tooltip } from "react-bootstrap";
 import { InstagramIcon } from "../Icons/InstagramIcon/InstagramIcon";
 import { WhatsAppIcon } from "../Icons/WhatsAppIcon/WhatsAppIcon";
 import { EmailIcon } from "../Icons/EmailIcon/EmailIcon";
@@ -48,10 +47,6 @@ export const Footer = ({ isMobile }: FooterProps) => {
     setEmailHovered(true);
   };
 
-  const renderTooltip = (message: string) => (
-    <Tooltip id="button-tooltip">{message}</Tooltip>
-  );
-
   return (
     <footer
       id="contacto"
@@ -62,9 +57,9 @@ export const Footer = ({ isMobile }: FooterProps) => {
         className="text-center p-3"
         style={{ background: "rgba(0, 0, 0, 0.05)", position: "relative" }}
       >
-        <Container>
-          <Row>
-            <Col>
+        <div className="container">
+          <div className="row">
+            <div className="col">
               <span
                 style={{
                   fontSize: "2rem",
@@ -75,9 +70,9 @@ export const Footer = ({ isMobile }: FooterProps) => {
               >
                 Contacto
               </span>
-            </Col>
-          </Row>
-          <Row
+            </div>
+          </div>
+          <div
             style={{
               width: isMobile ? "100%" : "60%",
               height: "40%",
@@ -85,12 +80,8 @@ export const Footer = ({ isMobile }: FooterProps) => {
               paddingBlock: "2rem",
             }}
           >
-            <Col style={{ padding: "1rem" }}>
-              <OverlayTrigger
-                placement="bottom"
-                delay={{ show: 200, hide: 200 }}
-                overlay={renderTooltip("Ve nuestro perfil de LinkedIn")}
-              >
+            <div className="row">
+              <div className="col" style={{ padding: "1rem" }}>
                 <a
                   href="https://www.linkedin.com/company/toniconecta/about/"
                   target="_blank"
@@ -110,14 +101,8 @@ export const Footer = ({ isMobile }: FooterProps) => {
                     }}
                   />
                 </a>
-              </OverlayTrigger>
-            </Col>
-            <Col style={{ padding: "1rem" }}>
-              <OverlayTrigger
-                placement="bottom"
-                delay={{ show: 200, hide: 200 }}
-                overlay={renderTooltip("Visita nuestro Instagram")}
-              >
+              </div>
+              <div className="col" style={{ padding: "1rem" }}>
                 <a
                   href="https://www.instagram.com/toniconecta/"
                   target="_blank"
@@ -137,14 +122,8 @@ export const Footer = ({ isMobile }: FooterProps) => {
                     }}
                   />
                 </a>
-              </OverlayTrigger>
-            </Col>
-            <Col style={{ padding: "1rem" }}>
-              <OverlayTrigger
-                placement="bottom"
-                delay={{ show: 200, hide: 200 }}
-                overlay={renderTooltip("Envianos un Whatsapp")}
-              >
+              </div>
+              <div className="col" style={{ padding: "1rem" }}>
                 <a
                   href="https://api.whatsapp.com/send?phone=5550301869"
                   target="_blank"
@@ -164,14 +143,8 @@ export const Footer = ({ isMobile }: FooterProps) => {
                     }}
                   />
                 </a>
-              </OverlayTrigger>
-            </Col>
-            <Col style={{ padding: "1rem" }}>
-              <OverlayTrigger
-                placement="bottom"
-                delay={{ show: 200, hide: 200 }}
-                overlay={renderTooltip("Envianos un Email")}
-              >
+              </div>
+              <div className="col" style={{ padding: "1rem" }}>
                 <a
                   href="mailto:hola@toniconecta.com"
                   target="_blank"
@@ -191,10 +164,10 @@ export const Footer = ({ isMobile }: FooterProps) => {
                     }}
                   />
                 </a>
-              </OverlayTrigger>
-            </Col>
-          </Row>
-        </Container>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   );

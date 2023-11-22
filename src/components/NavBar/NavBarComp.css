@@ -8,6 +8,7 @@
     padding-block: 0.5rem;
     padding-inline: 0;
     display: flex;
+    z-index: 1;
     
 }
 

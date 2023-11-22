@@ -38,7 +38,7 @@ export const WhatsAppScrollButton = () => {
         target="_blank"
         rel="noopener noreferrer"
         style={{
-          display: "block",
+          display: "flex",
           backgroundColor: "white",
           padding: "2px",
           borderRadius: "20%",
@@ -53,7 +53,8 @@ export const WhatsAppScrollButton = () => {
           src={whatsAppIcon}
           alt="WhatsApp"
           style={{
-            width: "50px",
+            margin: "0 auto",
+            width: "45px",
           }}
         />
       </a>

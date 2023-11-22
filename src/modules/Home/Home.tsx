@@ -1,6 +1,7 @@
 import React from "react";
 import HomeImg from "../../assets/homeImg/giftoni.gif";
 import number1 from "../../assets/homeImg/number1.png";
+import "./Home.css";
 
 interface HomeProps {
   isMobile: boolean;
@@ -31,13 +32,15 @@ export const Home = ({ isMobile }: HomeProps) => {
       }}
     >
       <div
+        className="container"
         style={{
           paddingBlock: "3%",
           height: "min-content",
         }}
       >
-        <div style={{ display: "flex" }}>
+        <div className="row" style={{ display: "flex" }}>
           <div
+            className="col"
             style={
               isMobile
                 ? {
@@ -71,22 +74,18 @@ export const Home = ({ isMobile }: HomeProps) => {
                   src={number1}
                   alt="Number 1"
                   style={{
-                    width: "1.5rem",
-                    height: "1.5rem",
+                    width: "10rem",
+                    height: "10rem",
                     marginInlineStart: "4px",
                     objectFit: "contain",
+                    verticalAlign: "middle",
                   }}
                 />
               </span>{" "}
               en <span style={{ color: "#5c81eb" }}>Google</span>!
             </p>
           </div>
-          <div
-            className="d-flex flex-column align-items-center justify-content-center"
-            style={{
-              margin: "0 auto",
-            }}
-          >
+          <div className="col img-container">
             <img
               src={HomeImg}
               alt="Home"
@@ -101,8 +100,7 @@ export const Home = ({ isMobile }: HomeProps) => {
                       transform: "rotate(-2deg)",
                     }
                   : {
-                      width: "35%",
-                      height: "35%",
+                      width: "291px",
                       margin: "0 auto",
                       marginTop: "4px",
                       objectFit: "contain",

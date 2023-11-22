@@ -4,6 +4,7 @@ import { colorPalette } from "../../styles/partials/colors";
 import { InstagramIcon } from "../Icons/InstagramIcon/InstagramIcon";
 import { WhatsAppIcon } from "../Icons/WhatsAppIcon/WhatsAppIcon";
 import { EmailIcon } from "../Icons/EmailIcon/EmailIcon";
+import "./Footer.css";
 
 interface FooterProps {
   isMobile: boolean;
@@ -48,24 +49,16 @@ export const Footer = ({ isMobile }: FooterProps) => {
   };
 
   return (
-    <footer
-      id="contacto"
-      className="bg-light text-center text-lg-start text-muted"
-    >
-      <div className="mt-auto"></div>
-      <div
-        className="text-center p-3"
-        style={{ background: "rgba(0, 0, 0, 0.05)", position: "relative" }}
-      >
-        <div className="container">
+    <footer id="contacto" className="footer">
+      <div className="footer-wrapper">
+        <div className="footer-container">
           <div className="row">
             <div className="col">
               <span
+                className="footer-title"
                 style={{
-                  fontSize: "2rem",
                   color: colorPalette.strongestAzure,
                   fontWeight: "lighter",
-                  marginInline: "auto",
                 }}
               >
                 Contacto

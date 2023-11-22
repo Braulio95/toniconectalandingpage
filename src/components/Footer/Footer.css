@@ -1,0 +1,17 @@
+footer {
+  background-color: #f8f9fa;
+  text-align: center;
+  color: #6c757d;
+}
+
+.footer-wrapper {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.footer-title {
+  font-size: 2rem;
+  margin-inline: "auto";
+}

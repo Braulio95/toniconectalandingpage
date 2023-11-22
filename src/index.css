@@ -17,3 +17,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px; /* Ajusta según sea necesario para compensar el espacio negativo de los márgenes */
+  margin-left: -15px; /* Ajusta según sea necesario para compensar el espacio negativo de los márgenes */
+}
+
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  padding-right: 15px; /* Ajusta según sea necesario para separación entre columnas */
+  padding-left: 15px; /* Ajusta según sea necesario para separación entre columnas */
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px; /* Ajusta según sea necesario para separación entre el contenido y los bordes del contenedor */
+  padding-left: 15px; /* Ajusta según sea necesario para separación entre el contenido y los bordes del contenedor */
+  margin-right: auto;
+  margin-left: auto;
+}

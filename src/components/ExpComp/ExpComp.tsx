@@ -1,33 +1,25 @@
 import React from "react";
 import { ExpProps } from "../../types/interfaces/ExpProps";
+import "./ExpComp.css";
 
 export const ExpComp = ({ experiences, isMobile }: ExpProps) => {
   if (isMobile) {
     return (
-      <div>
+      <div id="exp-container">
         {experiences.map(({ id, autor, description, img }, index) => {
-          const isImageOnLeft = index % 2 === 0;
-
           return (
-            <div
-              key={id}
-              style={{
-                display: "flex",
-                marginBottom: isImageOnLeft ? "0.5rem" : "6rem",
-              }}
-            >
+            <div key={id}>
               <div
                 style={{
-                  textAlign: isImageOnLeft ? "center" : "right",
-                  flex: "1",
-                  marginBottom: isImageOnLeft ? "0.5rem" : "3rem",
+                  textAlign: "center",
+                  marginBottom: "0.5rem",
                 }}
               >
                 <img
                   src={img}
                   alt={description}
                   style={{
-                    width: isImageOnLeft ? "200px" : "300px",
+                    height: "100px",
                     margin: "0 auto",
                   }}
                 />
@@ -37,8 +29,6 @@ export const ExpComp = ({ experiences, isMobile }: ExpProps) => {
                   display: "flex",
                   flexDirection: "column",
                   overflow: "auto",
-                  flex: "1",
-                  textAlign: isImageOnLeft ? "left" : "right",
                 }}
               >
                 <p
@@ -69,7 +59,7 @@ export const ExpComp = ({ experiences, isMobile }: ExpProps) => {
     );
   }
   return (
-    <div className="container">
+    <div id="exp-container" className="container">
       {experiences.map(({ id, autor, description, img }, index) => {
         const isImageOnLeft = index % 2 === 0;
         return (

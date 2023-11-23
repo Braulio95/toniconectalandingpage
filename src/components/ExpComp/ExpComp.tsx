@@ -8,7 +8,13 @@ export const ExpComp = ({ experiences, isMobile }: ExpProps) => {
       <div id="exp-container">
         {experiences.map(({ id, autor, description, img }, index) => {
           return (
-            <div key={id}>
+            <div
+              key={id}
+              style={{
+                textAlign: "center",
+                marginBottom: "6rem",
+              }}
+            >
               <div
                 style={{
                   textAlign: "center",

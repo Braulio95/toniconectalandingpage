@@ -11,6 +11,7 @@ export const Home = ({ isMobile }: HomeProps) => {
     fontWeight: 400,
     fontSize: "4rem",
     color: "white",
+    width: "content",
   };
 
   const headingStyleMobile = {
@@ -20,25 +21,9 @@ export const Home = ({ isMobile }: HomeProps) => {
   };
 
   return (
-    <div
-      id="inicio"
-      className="home"
-      style={{
-        paddingInline: "5%",
-        display: "flex",
-        height: "100%",
-        paddingBlock: "10%",
-        marginBottom: "10%",
-      }}
-    >
-      <div
-        className="container"
-        style={{
-          paddingBlock: "3%",
-          height: "min-content",
-        }}
-      >
-        <div className="row" style={{ display: "flex" }}>
+    <div id="inicio" className="home">
+      <div className="container">
+        <div className="row" style={{ display: "flex", margin: "5%" }}>
           <div
             className="col"
             style={
@@ -85,30 +70,29 @@ export const Home = ({ isMobile }: HomeProps) => {
               en <span style={{ color: "#5c81eb" }}>Google</span>!
             </p>
           </div>
-          <div className="col img-container">
-            <img
-              src={HomeImg}
-              alt="Home"
-              style={
-                isMobile
-                  ? {
-                      width: "30%",
-                      height: "30%",
-                      margin: "0 auto",
-                      marginTop: "4px",
-                      objectFit: "contain",
-                      transform: "rotate(-2deg)",
-                    }
-                  : {
-                      width: "291px",
-                      margin: "0 auto",
-                      marginTop: "4px",
-                      objectFit: "contain",
-                      transform: "rotate(-5deg)",
-                    }
-              }
-            />
-          </div>
+          <img
+            src={HomeImg}
+            alt="Home"
+            style={
+              isMobile
+                ? {
+                    width: "30%",
+                    height: "30%",
+                    margin: "0 auto",
+                    marginTop: "4px",
+                    objectFit: "contain",
+                    transform: "rotate(-2deg)",
+                  }
+                : {
+                    width: "340px",
+                    margin: "0px",
+                    marginTop: "4px",
+                    objectFit: "contain",
+                    transform: "rotate(-5deg)",
+                    marginLeft: "20px",
+                  }
+            }
+          />
         </div>
       </div>
     </div>

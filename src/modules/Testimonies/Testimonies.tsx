@@ -5,6 +5,7 @@ import centroDeServicioApple from "../../assets/testimonies/centrodeservicio.png
 import fixCity from "../../assets/testimonies/fixcity.png";
 import servicioHuawei from "../../assets/testimonies/seviciotecnicohw.png";
 import caremobile from "../../assets/testimonies/caremobile.png";
+import "./Testimonies.css";
 interface TestimoniesProps {
   isMobile: boolean;
 }
@@ -42,21 +43,16 @@ export const Testimonies = ({ isMobile }: TestimoniesProps) => {
   ];
 
   return (
-    <div
-      id="testimonios"
-      className="testimonios"
-      style={{
-        paddingInline: "5%",
-        height: "100%",
-        paddingBottom: "10%",
-        marginBottom: "8%",
-      }}
-    >
-      <div>
-        <div style={{ display: "flex" }}>
-          <SubtitleComp>Lo que nuestros clientes opinan</SubtitleComp>
-        </div>
-      </div>
+    <div id="testimonios" className="testimonios">
+      <SubtitleComp
+        style={{
+          textAlign: isMobile ? "center" : "left",
+          marginBottom: "3rem",
+        }}
+      >
+        Lo que nuestros clientes opinan
+      </SubtitleComp>
+
       <ExpComp experiences={workExperience} isMobile={isMobile} />
     </div>
   );

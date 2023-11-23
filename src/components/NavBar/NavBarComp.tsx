@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { NavBarProps } from "../../types/interfaces/NavBarProps";
 import { MAIN_ROUTES } from "../../constants/routes";
 import { colorPalette } from "../../styles/partials/colors";
@@ -8,6 +8,12 @@ import { WhatsAppIcon } from "../Icons/WhatsAppIcon/WhatsAppIcon";
 import "./NavBarComp.css";
 
 function NavBarComp({ tabItems, isMobile }: NavBarProps) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -21,18 +27,16 @@ function NavBarComp({ tabItems, isMobile }: NavBarProps) {
               target="_blank"
               rel="noreferrer"
             >
-              <WhatsAppIcon width="30px" height="30px" color="#5c81eb" />
+              <WhatsAppIcon width="40px" height="40px" color="#5c81eb" />
             </a>
+
             <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
+              className={`menu-button ${isOpen ? "open" : ""}`}
+              onClick={handleToggle}
             >
-              <span className="navbar-toggler-icon"></span>
+              <div className="bar"></div>
+              <div className="bar middle"></div>
+              <div className="bar down"></div>
             </button>
           </Fragment>
         ) : (

@@ -1,11 +1,11 @@
 import React, { Fragment, useState } from "react";
 import { NavBarProps } from "../../types/interfaces/NavBarProps";
 import { MAIN_ROUTES } from "../../constants/routes";
-import { colorPalette } from "../../styles/partials/colors";
-import { HashLink } from "react-router-hash-link";
 import Logo from "../../assets/navIcon/logo.png";
 import { WhatsAppIcon } from "../Icons/WhatsAppIcon/WhatsAppIcon";
 import "./NavBarComp.css";
+import { WideScreenMenu } from "./NavBarComponents/WideScreenMenu";
+import { HashLink } from "react-router-hash-link";
 
 function NavBarComp({ tabItems, isMobile }: NavBarProps) {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,27 +38,22 @@ function NavBarComp({ tabItems, isMobile }: NavBarProps) {
               <div className="bar middle"></div>
               <div className="bar down"></div>
             </button>
+            <div className={`side-menu ${isOpen ? "open" : ""}`}>
+              {tabItems && tabItems.length && (
+                <ul>
+                  {tabItems.map(({ id, label, routePath }) => (
+                    <li key={id}>
+                      <HashLink className="mobile-item" to={`#${routePath}`}>
+                        {label}
+                      </HashLink>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
           </Fragment>
         ) : (
-          <div className="tabs-container" id="navbarNav">
-            {tabItems && tabItems.length && (
-              <ul className="navbar-nav">
-                {tabItems.map(({ id, label, routePath }) => (
-                  <li className="nav-item" key={id}>
-                    <HashLink
-                      className="nav-link"
-                      to={`#${routePath}`}
-                      style={{
-                        color: colorPalette.midAzure,
-                      }}
-                    >
-                      {label}
-                    </HashLink>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
+          <WideScreenMenu tabItems={tabItems} />
         )}
       </div>
     </nav>

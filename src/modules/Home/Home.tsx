@@ -76,8 +76,7 @@ export const Home = ({ isMobile }: HomeProps) => {
             style={
               isMobile
                 ? {
-                    width: "30%",
-                    height: "30%",
+                    width: "80%",
                     margin: "0 auto",
                     marginTop: "4px",
                     objectFit: "contain",

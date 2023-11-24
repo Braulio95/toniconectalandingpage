@@ -81,3 +81,36 @@
   .middle{
     width: 24px;
   }
+/* SideMenu.css */
+  .side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Inicialmente oculto fuera del área visible */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    transition: left 0.3s ease;
+    overflow-x: hidden;
+    padding-top: 60px; /* Ajusta según tus necesidades */
+  }
+  
+  .side-menu.open {
+    left: 0;
+  }
+  
+  .side-menu ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .side-menu ul li{
+    padding-block: 1rem;
+  }
+  .mobile-item {
+    padding: 15px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+  }

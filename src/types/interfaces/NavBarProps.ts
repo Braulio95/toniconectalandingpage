@@ -5,7 +5,6 @@ interface Tabs {
 }
 
 export interface NavBarProps {
-  pageName: string;
   isMobile?: boolean;
   tabItems?: Tabs[];
 }

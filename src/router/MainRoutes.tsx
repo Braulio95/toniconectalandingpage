@@ -12,7 +12,7 @@ interface MainRoutesProps {
 }
 
 export const MainRoutes = ({ isMobile }: MainRoutesProps) => {
-  const { HOME, ABOUTUS, TESTIMONIES, CONTACT } = MAIN_ROUTES;
+  const { TESTIMONIES, CONTACT } = MAIN_ROUTES;
   const navTabs = [
     {
       id: 3,
@@ -30,11 +30,7 @@ export const MainRoutes = ({ isMobile }: MainRoutesProps) => {
     <BrowserRouter>
       {/* Header and navigation */}
       {isMobile === false && <WhatsAppScrollButton />}
-      <NavBarComp
-        pageName="Braulio Blog"
-        tabItems={navTabs}
-        isMobile={isMobile}
-      />
+      <NavBarComp tabItems={navTabs} isMobile={isMobile} />
       {/* Main Content */}
       {/* Tags for SEO */}
       <h1 style={{ display: "none" }}>

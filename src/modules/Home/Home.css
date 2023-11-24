@@ -1,0 +1,17 @@
+#inicio {
+  max-width: 1280px; /* o el valor que desees para pantallas extra grandes */
+  width: 100%;
+  padding-inline: 15px; /* Ajusta según sea necesario para separación entre el contenido y los bordes del contenedor */ /* Ajusta según sea necesario para separación entre el contenido y los bordes del contenedor */
+  margin-inline: auto;
+  display: flex;
+  height: 100%;
+  padding-block: 5%;
+  margin-bottom: 10%;
+}
+
+.img-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

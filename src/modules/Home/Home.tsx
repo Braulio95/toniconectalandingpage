@@ -1,11 +1,7 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import Image from "react-bootstrap/Image";
 import HomeImg from "../../assets/homeImg/giftoni.gif";
 import number1 from "../../assets/homeImg/number1.png";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./Home.css";
 
 interface HomeProps {
   isMobile: boolean;
@@ -15,6 +11,7 @@ export const Home = ({ isMobile }: HomeProps) => {
     fontWeight: 400,
     fontSize: "4rem",
     color: "white",
+    width: "content",
   };
 
   const headingStyleMobile = {
@@ -24,28 +21,11 @@ export const Home = ({ isMobile }: HomeProps) => {
   };
 
   return (
-    <Container
-      id="inicio"
-      fluid="xxl"
-      className="home"
-      style={{
-        paddingInline: "5%",
-        display: "flex",
-        height: "100%",
-        paddingBlock: "10%",
-        marginBottom: "10%",
-      }}
-    >
-      <Container
-        style={{
-          paddingBlock: "3%",
-          height: "min-content",
-        }}
-      >
-        <Row style={{ display: "flex" }}>
-          <Col
-            lg={8}
-            xxl={8}
+    <div id="inicio" className="home">
+      <div className="container">
+        <div className="row" style={{ display: "flex", margin: "5%" }}>
+          <div
+            className="col"
             style={
               isMobile
                 ? {
@@ -70,56 +50,50 @@ export const Home = ({ isMobile }: HomeProps) => {
                 style={{
                   color: "blue",
                   fontWeight: 700,
-                  fontSize: "6rem",
+                  fontSize: "2rem",
+                  display: "inline-block",
+                  marginInlineStart: "4px",
                 }}
               >
-                <Image
+                <img
                   src={number1}
+                  alt="Number 1"
                   style={{
-                    width: `${160}px`,
-                    height: `${160}px`,
-                    margin: "0 auto",
-                    marginTop: "4px",
+                    width: "10rem",
+                    height: "10rem",
+                    marginInlineStart: "4px",
                     objectFit: "contain",
+                    verticalAlign: "middle",
                   }}
                 />
               </span>{" "}
               en <span style={{ color: "#5c81eb" }}>Google</span>!
             </p>
-          </Col>
-          <Col
-            lg={4}
-            xxl={4}
-            className="d-flex flex-column align-items-center justify-content-center"
-            style={{
-              margin: "0 auto",
-            }}
-          >
-            <Image
-              src={HomeImg}
-              style={
-                isMobile
-                  ? {
-                      width: `${970 * 0.3}px`,
-                      height: `${1920 * 0.3}px`,
-                      margin: "0 auto",
-                      marginTop: "4px",
-                      objectFit: "contain",
-                      rotate: "-2deg",
-                    }
-                  : {
-                      width: `${970 * 0.35}px`,
-                      height: `${1920 * 0.35}px`,
-                      margin: "0 auto",
-                      marginTop: "4px",
-                      objectFit: "contain",
-                      rotate: "-5deg",
-                    }
-              }
-            />
-          </Col>
-        </Row>
-      </Container>
-    </Container>
+          </div>
+          <img
+            src={HomeImg}
+            alt="Home"
+            style={
+              isMobile
+                ? {
+                    width: "80%",
+                    margin: "0 auto",
+                    marginTop: "4px",
+                    objectFit: "contain",
+                    transform: "rotate(-2deg)",
+                  }
+                : {
+                    width: "340px",
+                    margin: "0px",
+                    marginTop: "4px",
+                    objectFit: "contain",
+                    transform: "rotate(-5deg)",
+                    marginLeft: "20px",
+                  }
+            }
+          />
+        </div>
+      </div>
+    </div>
   );
 };

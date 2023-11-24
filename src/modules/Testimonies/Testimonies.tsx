@@ -1,12 +1,11 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
-import Container from "react-bootstrap/Container";
 import { ExpComp } from "../../components/ExpComp/ExpComp";
 import { SubtitleComp } from "../../components/SubtitleComp/SubtitleComp";
 import centroDeServicioApple from "../../assets/testimonies/centrodeservicio.png";
 import fixCity from "../../assets/testimonies/fixcity.png";
 import servicioHuawei from "../../assets/testimonies/seviciotecnicohw.png";
 import caremobile from "../../assets/testimonies/caremobile.png";
+import "./Testimonies.css";
 interface TestimoniesProps {
   isMobile: boolean;
 }
@@ -44,23 +43,17 @@ export const Testimonies = ({ isMobile }: TestimoniesProps) => {
   ];
 
   return (
-    <Container
-      id="testimonios"
-      fluid="xxl"
-      className="testimonios"
-      style={{
-        paddingInline: "5%",
-        height: "100%",
-        paddingBottom: "10%",
-        marginBottom: "8%",
-      }}
-    >
-      <Row>
-        <Col xxl="12" style={{ display: "flex" }}>
-          <SubtitleComp>Lo que nuestros clientes opinan</SubtitleComp>
-        </Col>
-      </Row>
+    <div id="testimonios" className="testimonios">
+      <SubtitleComp
+        style={{
+          textAlign: isMobile ? "center" : "left",
+          marginBottom: "3rem",
+        }}
+      >
+        Lo que nuestros clientes opinan
+      </SubtitleComp>
+
       <ExpComp experiences={workExperience} isMobile={isMobile} />
-    </Container>
+    </div>
   );
 };

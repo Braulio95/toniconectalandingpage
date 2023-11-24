@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/toniconectalandingpage/static/css/main.f1f7bcba.css",
-    "main.js": "/toniconectalandingpage/static/js/main.9b083c2b.js",
+    "main.css": "/toniconectalandingpage/static/css/main.94ca461d.css",
+    "main.js": "/toniconectalandingpage/static/js/main.1a96006c.js",
     "static/js/787.a361b86b.chunk.js": "/toniconectalandingpage/static/js/787.a361b86b.chunk.js",
     "static/media/giftoni.gif": "/toniconectalandingpage/static/media/giftoni.af270bed64ee63ad5a12.gif",
     "static/media/whatslogo.png": "/toniconectalandingpage/static/media/whatslogo.de0922ed7476b4afabd9.png",
@@ -12,12 +12,12 @@
     "static/media/caremobile.png": "/toniconectalandingpage/static/media/caremobile.086bd31ca776749d8073.png",
     "static/media/number1.png": "/toniconectalandingpage/static/media/number1.de22193ba9f04d01179a.png",
     "index.html": "/toniconectalandingpage/index.html",
-    "main.f1f7bcba.css.map": "/toniconectalandingpage/static/css/main.f1f7bcba.css.map",
-    "main.9b083c2b.js.map": "/toniconectalandingpage/static/js/main.9b083c2b.js.map",
+    "main.94ca461d.css.map": "/toniconectalandingpage/static/css/main.94ca461d.css.map",
+    "main.1a96006c.js.map": "/toniconectalandingpage/static/js/main.1a96006c.js.map",
     "787.a361b86b.chunk.js.map": "/toniconectalandingpage/static/js/787.a361b86b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f1f7bcba.css",
-    "static/js/main.9b083c2b.js"
+    "static/css/main.94ca461d.css",
+    "static/js/main.1a96006c.js"
   ]
 }

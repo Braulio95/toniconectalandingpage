@@ -1,4 +1,10 @@
-import React, { Fragment, useState } from "react";
+import React, {
+  Fragment,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { NavBarProps } from "../../types/interfaces/NavBarProps";
 import { MAIN_ROUTES } from "../../constants/routes";
 import Logo from "../../assets/navIcon/logo.png";
@@ -9,10 +15,36 @@ import { HashLink } from "react-router-hash-link";
 
 function NavBarComp({ tabItems, isMobile }: NavBarProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const sideMenuRef = useRef(null);
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const closeSideMenu = () => {
+    setIsOpen(false);
+  };
+
+  const handleClickOutside = useCallback(
+    (event: MouseEvent) => {
+      if (
+        sideMenuRef.current &&
+        !(sideMenuRef.current as Element).contains(event.target as Node)
+      ) {
+        closeSideMenu();
+      }
+    },
+    [sideMenuRef, closeSideMenu]
+  );
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [handleClickOutside]);
 
   return (
     <nav className="navbar">
@@ -38,7 +70,10 @@ function NavBarComp({ tabItems, isMobile }: NavBarProps) {
               <div className="bar middle"></div>
               <div className="bar down"></div>
             </button>
-            <div className={`side-menu ${isOpen ? "open" : ""}`}>
+            <div
+              className={`side-menu ${isOpen ? "open" : ""}`}
+              ref={sideMenuRef}
+            >
               {tabItems && tabItems.length && (
                 <ul>
                   {tabItems.map(({ id, label, routePath }) => (

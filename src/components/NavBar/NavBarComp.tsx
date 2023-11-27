@@ -15,9 +15,10 @@ import { HashLink } from "react-router-hash-link";
 
 function NavBarComp({ tabItems, isMobile }: NavBarProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const sideMenuRef = useRef(null);
+  const sideMenuRef = useRef<HTMLDivElement | null>(null);
 
-  const handleToggle = () => {
+  const handleToggle = (event: React.MouseEvent) => {
+    event.stopPropagation();
     setIsOpen(!isOpen);
   };
 
@@ -49,9 +50,11 @@ function NavBarComp({ tabItems, isMobile }: NavBarProps) {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <a className="navbar-logo-container" href={`#${MAIN_ROUTES.HOME}`}>
-          <img className="navbar-logo" src={Logo} alt="toniconecta-logo" />
-        </a>
+        <div className="navbar-logo-container">
+          <a href={`#${MAIN_ROUTES.HOME}`}>
+            <img className="navbar-logo" src={Logo} alt="toniconecta-logo" />
+          </a>
+        </div>
         {isMobile ? (
           <Fragment>
             <a

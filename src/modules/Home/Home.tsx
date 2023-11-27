@@ -61,7 +61,6 @@ export const Home = ({ isMobile }: HomeProps) => {
                   style={{
                     width: "10rem",
                     height: "10rem",
-                    marginInlineStart: "4px",
                     objectFit: "contain",
                     verticalAlign: "middle",
                   }}

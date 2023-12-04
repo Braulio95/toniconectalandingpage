@@ -21,9 +21,13 @@ export const Home = ({ isMobile }: HomeProps) => {
   };
 
   return (
-    <div id="inicio" className="home">
+    <div
+      id="inicio"
+      className="home"
+      style={{ minHeight: "calc(100vh - 80.28px)" }}
+    >
       <div className="container">
-        <div className="row" style={{ display: "flex", margin: "5%" }}>
+        <div className="row" style={{ display: "flex", marginInline: "8%" }}>
           <div
             className="col"
             style={

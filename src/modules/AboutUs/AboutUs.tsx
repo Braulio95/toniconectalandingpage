@@ -25,7 +25,7 @@ export const AboutUs = ({ isMobile }: AboutUsProps) => {
     return (
       <div id="sobrenosotros" className="aboutus">
         <div className="content-container-mobile">
-          <img src={aboutUs} alt="about us image" />
+          <img src={aboutUs} alt="about us" />
           <SubtitleComp
             style={{
               textAlign: "left",
@@ -35,13 +35,25 @@ export const AboutUs = ({ isMobile }: AboutUsProps) => {
           >
             Sobre ToniConecta
           </SubtitleComp>
-          <div className="description-text">{paragraphs}</div>
+          <div className="description-text">
+            {paragraphs}
+            <div
+              className="description-footer"
+              style={{ color: colorPalette.accentPurple, textAlign: "center" }}
+            >
+              ¡Somos una cultura que repara!
+            </div>
+          </div>
         </div>
       </div>
     );
   }
   return (
-    <div id="sobrenosotros" className="aboutus">
+    <div
+      id="sobrenosotros"
+      className="aboutus"
+      style={{ minHeight: "calc(100vh - 80.28px)" }}
+    >
       <SubtitleComp
         style={{
           textAlign: "center",
@@ -51,8 +63,16 @@ export const AboutUs = ({ isMobile }: AboutUsProps) => {
         Sobre ToniConecta
       </SubtitleComp>
       <div className="content-container">
-        <img src={aboutUs} alt="about us image" />
-        <div className="description-text">{paragraphs}</div>
+        <img src={aboutUs} alt="about us" />
+        <div className="description-text" style={{ maxWidth: 1280 / 2 }}>
+          {paragraphs}
+          <div
+            className="description-footer"
+            style={{ color: colorPalette.accentPurple }}
+          >
+            ¡Somos una cultura que repara!
+          </div>
+        </div>
       </div>
     </div>
   );

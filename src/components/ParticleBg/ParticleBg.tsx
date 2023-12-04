@@ -63,7 +63,7 @@ export const ParticleBg = () => {
             },
           },
           line_linked: {
-            enable: true,
+            enable: false,
             distance: 150,
             color: `ffffff`,
             opacity: 0.6,
@@ -88,7 +88,7 @@ export const ParticleBg = () => {
           detect_on: "window",
           events: {
             onhover: {
-              enable: true,
+              enable: false,
               mode: "repulse",
             },
             onclick: {

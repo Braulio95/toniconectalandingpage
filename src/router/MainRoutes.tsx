@@ -13,8 +13,13 @@ interface MainRoutesProps {
 }
 
 export const MainRoutes = ({ isMobile }: MainRoutesProps) => {
-  const { TESTIMONIES, CONTACT } = MAIN_ROUTES;
+  const { TESTIMONIES, CONTACT, ABOUTUS } = MAIN_ROUTES;
   const navTabs = [
+    {
+      id: 2,
+      label: "Sobre nosotros",
+      routePath: ABOUTUS,
+    },
     {
       id: 3,
       label: "Testimonios",

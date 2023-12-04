@@ -2,6 +2,7 @@ import React from "react";
 import "./AboutUs.css";
 import aboutUs from "../../assets/aboutUs/aboutus.png";
 import { SubtitleComp } from "../../components/SubtitleComp/SubtitleComp";
+import { colorPalette } from "../../styles/partials/colors";
 
 interface AboutUsProps {
   isMobile: Boolean;
@@ -22,27 +23,28 @@ export const AboutUs = ({ isMobile }: AboutUsProps) => {
 
   if (isMobile) {
     return (
-      <div id="aboutus" className="aboutus">
-        <SubtitleComp
-          style={{
-            textAlign: isMobile ? "center" : "left",
-            marginBottom: "3rem",
-          }}
-        >
-          Sobre ToniConecta
-        </SubtitleComp>
+      <div id="sobrenosotros" className="aboutus">
         <div className="content-container-mobile">
           <img src={aboutUs} alt="about us image" />
+          <SubtitleComp
+            style={{
+              textAlign: "left",
+              marginBottom: "2rem",
+              color: colorPalette.accentPurple,
+            }}
+          >
+            Sobre ToniConecta
+          </SubtitleComp>
           <div className="description-text">{paragraphs}</div>
         </div>
       </div>
     );
   }
   return (
-    <div id="aboutus" className="aboutus">
+    <div id="sobrenosotros" className="aboutus">
       <SubtitleComp
         style={{
-          textAlign: isMobile ? "center" : "left",
+          textAlign: "center",
           marginBottom: "3rem",
         }}
       >

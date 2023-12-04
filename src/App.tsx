@@ -21,9 +21,13 @@ function App() {
   return (
     <div
       className="App"
-      style={{ position: "relative", fontFamily: "Roboto Mono" }}
+      style={{
+        position: "relative",
+        fontFamily: "Roboto Mono",
+        backgroundColor: "black",
+      }}
     >
-      <ParticleBg />
+      {/*<ParticleBg />*/}
       <h1 style={{ display: "none" }}>
         Toni Conecta - Posicionar en Google numero 1 para talleres de reparacion
         - SEO para talleres de reparacion

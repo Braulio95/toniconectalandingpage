@@ -1,0 +1,25 @@
+.aboutus {
+  width: 100%;
+}
+.content-container {
+  display: flex;
+}
+.description-text {
+  color: white;
+}
+
+.content-container img {
+  width: 50%;
+}
+
+.content-container-mobile {
+  display: block;
+}
+
+.content-container-mobile img {
+  width: 100%;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}

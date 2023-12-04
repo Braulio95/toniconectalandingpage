@@ -6,6 +6,7 @@ import NavBarComp from "../components/NavBar/NavBarComp";
 import { MAIN_ROUTES } from "../constants/routes";
 import { Testimonies } from "../modules/Testimonies/Testimonies";
 import { WhatsAppScrollButton } from "../components/WhatsAppScrollButton/WhatsAppScrollButton";
+import { AboutUs } from "../modules/AboutUs/AboutUs";
 
 interface MainRoutesProps {
   isMobile: boolean;
@@ -43,6 +44,7 @@ export const MainRoutes = ({ isMobile }: MainRoutesProps) => {
       </h2>
       <Home isMobile={isMobile} />
       {/* Footer and contact info */}
+      <AboutUs isMobile={isMobile} />
       <Testimonies isMobile={isMobile} />
       <Footer isMobile={isMobile} />
     </BrowserRouter>

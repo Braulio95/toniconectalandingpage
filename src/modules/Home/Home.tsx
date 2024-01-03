@@ -1,63 +1,37 @@
 import React from "react";
 import HomeImg from "../../assets/homeImg/giftoni.gif";
+import { Button } from "../../components/Button/Button";
 import "./Home.css";
 
 interface HomeProps {
     isMobile: boolean;
 }
 export const Home = ({ isMobile }: HomeProps) => {
-    const headingStyle = {
-        fontWeight: 400,
-        fontSize: "2.5rem",
-        color: "black",
-        width: "content",
-    };
-
-    const headingStyleMobile = {
-        fontWeight: 600,
-        fontSize: "3rem",
-        color: "black",
-    };
-
     return (
         <div id="inicio" className="home">
             <div className="container">
                 <div
-                    style={{
-                        position: "absolute",
-                        zIndex: "-1",
-                        width: "45%",
-                        height: "620px",
-                        backgroundColor: "#BFBFBF",
-                        opacity: "50",
-                        right: "0",
-                    }}
+                    className={`background-gif ${
+                        isMobile ? "background-gif-mobile" : ""
+                    }`}
                 ></div>
                 <div
                     className="row"
-                    style={{ display: "flex", marginRight: "20%" }}
+                    style={{
+                        display: "flex",
+                        marginRight: isMobile ? 0 : "20%",
+                    }}
                 >
                     <div
-                        className="col"
-                        style={
-                            isMobile
-                                ? {
-                                      marginBlock: "1rem",
-                                      display: "flex",
-                                      flexDirection: "column",
-                                      alignItems: "center",
-                                      textAlign: "center",
-                                  }
-                                : {
-                                      marginBlock: "5rem",
-                                      display: "flex",
-                                      flexDirection: "column",
-                                      alignItems: "left",
-                                      textAlign: "left",
-                                  }
-                        }
+                        className={`col format ${
+                            isMobile ? "format-mobile" : ""
+                        }`}
                     >
-                        <p style={isMobile ? headingStyleMobile : headingStyle}>
+                        <p
+                            className={`heading-style${
+                                isMobile ? "heading-style-mobile" : ""
+                            }`}
+                        >
                             ¡Tu taller{" "}
                             <span
                                 style={{
@@ -71,7 +45,22 @@ export const Home = ({ isMobile }: HomeProps) => {
                             </span>{" "}
                             en <span style={{ color: "#5c81eb" }}>Google</span>!
                         </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Quos voluptas, quibusdam laudantium ratione
+                            eius reiciendis. Eos repellat neque debitis iste
+                            provident, quasi esse corporis eveniet voluptas
+                            consequuntur qui aperiam obcaecati!
+                        </p>
+                        <div className="button-container">
+                            <Button
+                                text="Solicitar una prueba"
+                                textColor="white"
+                                color="#5c81eb"
+                            />
+                        </div>
                     </div>
+
                     <img
                         className={
                             isMobile ? "animated-gif-mobile" : "animated-gif"

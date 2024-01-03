@@ -27,3 +27,50 @@
   object-fit: contain;
   margin-left: 20px;
 }
+
+.background-gif{
+  position: absolute;
+  z-index: -1;
+  width: 45%;
+  height: 620px;
+  background-color: #BFBFBF;
+  opacity: 50;
+  right: 0;
+}
+
+.background-gif-mobile{
+  width: 100%;
+  height: 500px;
+  top: 600px;
+}
+
+.button-container{
+  display: flex;
+  justify-content: right;
+}
+
+.format{
+  margin-block: 5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.format-mobile{
+  margin-block: 1rem;
+  align-items: center;
+  text-align: center;
+}
+
+.heading-style {
+  font-weight: 400;
+  font-size: 2.5rem;
+  color:black;
+  width: content;
+};
+
+.heading-style-mobile {
+  font-weight: 600;
+  font-size: "3rem";
+  color: "black";
+};

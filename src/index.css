@@ -29,8 +29,6 @@ code {
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
-  padding-right: 15px; /* Ajusta según sea necesario para separación entre columnas */
-  padding-left: 15px; /* Ajusta según sea necesario para separación entre columnas */
 }
 
 .container {

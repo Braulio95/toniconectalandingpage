@@ -50,7 +50,7 @@ export const MainRoutes = ({ isMobile }: MainRoutesProps) => {
             </h2>
             <Home isMobile={isMobile} />
             {/* Footer and contact info */}
-            <HowItWorks />
+            <HowItWorks isMobile={isMobile} />
             <AboutUs isMobile={isMobile} />
             <Testimonies isMobile={isMobile} />
             <Footer isMobile={isMobile} />

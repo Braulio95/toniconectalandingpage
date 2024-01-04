@@ -8,13 +8,18 @@
     min-height: inherit;
   }
 
+.wrapper-mobile{
+    display:flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
 .title-panel{
 background-color: #0A3273;
 }
 
 .info-panel{
-    background-color: #6695E1;
-    opacity: 10%;
+    background-color: rgba(102, 149, 225, 0.10);
 }
 
 .title-banner{
@@ -26,4 +31,29 @@ background-color: #0A3273;
 .title-banner > img{
     margin-inline: auto;
     width: 180px;
+}
+
+.title-container{
+    color: white;
+    display: flex;
+    height: calc(100% - 82px);
+    justify-content: right;
+}
+
+.title-text{
+    margin-block:auto;
+    width: 60%;
+}
+
+.info-container{
+    color: black;
+    display: flex;
+    height: 100%;
+    justify-content: left;
+}
+
+.info-text{
+    margin-block:auto;
+    width: 80%;
+    padding: 1rem;
 }

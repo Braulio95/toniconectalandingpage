@@ -1,0 +1,29 @@
+#how-it-works {
+    min-height: calc(100vh - 90px)
+  }
+
+.wrapper {
+    display: grid;
+    grid-template-columns:45% 55%;
+    min-height: inherit;
+  }
+
+.title-panel{
+background-color: #0A3273;
+}
+
+.info-panel{
+    background-color: #6695E1;
+    opacity: 10%;
+}
+
+.title-banner{
+    background-color: rgba(102, 149, 225, 0.37);
+    display: flex;
+    padding-block: 1rem;
+}
+
+.title-banner > img{
+    margin-inline: auto;
+    width: 180px;
+}

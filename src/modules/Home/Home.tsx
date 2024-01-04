@@ -28,18 +28,27 @@ export const Home = ({ isMobile }: HomeProps) => {
                         }`}
                     >
                         <p
-                            className={`heading-style${
+                            className={`heading-style ${
                                 isMobile ? "heading-style-mobile" : ""
                             }`}
                         >
                             ¡Tu taller{" "}
                             <span
-                                style={{
-                                    fontWeight: 700,
-                                    fontSize: "4rem",
-                                    display: "inline-block",
-                                    color: "#5c81eb",
-                                }}
+                                style={
+                                    isMobile
+                                        ? {
+                                              fontWeight: 700,
+                                              fontSize: "3rem",
+                                              display: "inline-block",
+                                              color: "#5c81eb",
+                                          }
+                                        : {
+                                              fontWeight: 700,
+                                              fontSize: "4rem",
+                                              display: "inline-block",
+                                              color: "#5c81eb",
+                                          }
+                                }
                             >
                                 #1
                             </span>{" "}

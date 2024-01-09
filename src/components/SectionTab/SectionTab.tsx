@@ -3,8 +3,17 @@ import "./SectionTab.css";
 
 interface SectionTabProps {
   title: string;
+  isActive: boolean;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-export const SectionTab = ({ title }: SectionTabProps) => {
-  return <button className="tab-howit">{title}</button>;
+export const SectionTab = ({ title, isActive, onClick }: SectionTabProps) => {
+  return (
+    <button
+      className={`tab-howit ${isActive ? "active" : ""}`}
+      onClick={onClick}
+    >
+      {title}
+    </button>
+  );
 };

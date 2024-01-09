@@ -68,11 +68,13 @@ const Carousel = ({ children, isMobile }: CarruselProps) => {
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-          {children.map((child, index) => (
-            <div key={index} className="carousel-slide-mobile">
-              {child}
-            </div>
-          ))}
+          {children.map((child, index) => {
+            return (
+              <div key={index} className="carousel-slide-mobile">
+                {child}
+              </div>
+            );
+          })}
         </div>
       </div>
     );

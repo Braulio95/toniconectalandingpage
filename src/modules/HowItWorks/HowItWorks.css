@@ -36,14 +36,26 @@
 .title-container {
   color: white;
   display: flex;
-  flex-direction: column;
   height: calc(100% - 82px);
   justify-content: right;
 }
 
+.title-container-mobile {
+  flex-direction: column;
+}
+
 .title-text {
+  display: flex;
+  flex-direction: column;
   margin-block: auto;
   width: 60%;
+  justify-content: right;
+}
+
+.title-text-mobile {
+  margin-block: auto;
+  width: 100%;
+  padding: 1rem;
 }
 
 .info-container {

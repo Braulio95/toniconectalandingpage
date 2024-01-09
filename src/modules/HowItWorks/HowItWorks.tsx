@@ -2,6 +2,7 @@ import React from "react";
 import "./HowItWorks.css";
 import Logo from "../../assets/navIcon/logo.png";
 import { SectionTab } from "../../components/SectionTab/SectionTab";
+import Carousel from "../../components/Carousel/Carousel";
 interface MobileProps {
   isMobile: boolean;
 }
@@ -14,15 +15,36 @@ export const HowItWorks = ({ isMobile }: MobileProps) => {
           <div className="title-banner">
             <img src={Logo} alt="toniconecta-logo" />
           </div>
-          <div className="title-container">
-            <div className="title-text">
+          <div
+            className={`title-container ${
+              isMobile ? "title-container-mobile" : ""
+            }`}
+          >
+            <div
+              className={`title-text ${isMobile ? "title-text-mobile" : ""}`}
+            >
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Deleniti consequuntur laudantium cum aliquid explicabo.
               </p>
-              <SectionTab />
-              <SectionTab />
-              <SectionTab />
+              {isMobile ? (
+                <Carousel isMobile={isMobile}>
+                  <SectionTab title="Webs y leads" />
+                  <SectionTab title="CRM" />
+                </Carousel>
+              ) : (
+                <div
+                  style={{
+                    width: "50%",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "16px",
+                  }}
+                >
+                  <SectionTab title="Webs y leads" />
+                  <SectionTab title="CRM" />
+                </div>
+              )}
             </div>
           </div>
         </div>

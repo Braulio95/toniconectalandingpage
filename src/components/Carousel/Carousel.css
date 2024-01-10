@@ -1,9 +1,17 @@
 .carousel-container {
   position: relative;
-  width: 80%;
-  margin: 0 auto;
+  width: 60%;
   overflow: hidden;
   display: flex;
+}
+
+.carousel-container-mobile {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  padding-block: 4px;
+  padding-inline: 4px;
+  min-height: fit-content;
 }
 
 .carousel-slider {
@@ -13,7 +21,6 @@
 
 .carousel-slider-mobile {
   display: flex;
-  width: 100%;
   transition: transform 0.5s ease-in-out;
 }
 
@@ -40,4 +47,12 @@
   margin-block: auto;
   filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
   margin-inline: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.slider-button-visible {
+  opacity: 1;
+  visibility: visible;
 }

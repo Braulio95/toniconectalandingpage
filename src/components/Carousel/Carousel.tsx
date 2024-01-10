@@ -14,8 +14,12 @@ const Carousel = ({ children, isMobile }: CarruselProps) => {
   const [offset, setOffset] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
+  const isFirstSlide = currentIndex === 0;
+  const isLastSlide = currentIndex === children.length - 1;
+
   const goToNextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % children.length);
+    console.log(children);
   };
 
   const goToPrevSlide = () => {
@@ -58,7 +62,7 @@ const Carousel = ({ children, isMobile }: CarruselProps) => {
 
   if (isMobile) {
     return (
-      <div className="carousel-container" ref={containerRef}>
+      <div className="carousel-container-mobile" ref={containerRef}>
         <div
           className="carousel-slider-mobile"
           style={{
@@ -82,13 +86,19 @@ const Carousel = ({ children, isMobile }: CarruselProps) => {
 
   return (
     <div className="carousel-container">
-      <button className="slider-button" onClick={goToPrevSlide}>
+      <button
+        className={`slider-button ${
+          isFirstSlide ? "" : "slider-button-visible"
+        }`}
+        onClick={goToPrevSlide}
+        disabled={isFirstSlide}
+      >
         Anterior
       </button>
       <div className="carousel-slider">
         <div
           className="carousel-slides"
-          style={{ transform: `translateX(-${currentIndex * 90}%)` }}
+          style={{ transform: `translateX(-${currentIndex * 360}px)` }}
         >
           {children.map((child, index) => (
             <div key={index} className="carousel-slide">
@@ -97,7 +107,13 @@ const Carousel = ({ children, isMobile }: CarruselProps) => {
           ))}
         </div>
       </div>
-      <button className="slider-button" onClick={goToNextSlide}>
+      <button
+        className={`slider-button ${
+          isLastSlide ? "" : "slider-button-visible"
+        }`}
+        onClick={goToNextSlide}
+        disabled={isLastSlide}
+      >
         Siguiente
       </button>
     </div>

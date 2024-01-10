@@ -45,7 +45,10 @@ export const Testimonies = ({ isMobile }: TestimoniesProps) => {
   ];
 
   return (
-    <div id="testimonios" className="testimonios">
+    <div
+      id="testimonios"
+      className={`testimonios ${isMobile ? "testimonios-mobile" : ""}`}
+    >
       <div className="testimonites-title">
         <SubtitleComp
           style={{
@@ -56,19 +59,19 @@ export const Testimonies = ({ isMobile }: TestimoniesProps) => {
           Lo que nuestros clientes opinan
         </SubtitleComp>
       </div>
-      <div>
-        <Carousel isMobile={isMobile}>
-          {workExperience.map((experience) => {
-            return (
-              <TestimonieCard
-                author={experience.autor}
-                description={experience.description}
-                image={experience.img}
-              />
-            );
-          })}
-        </Carousel>
-      </div>
+
+      <Carousel isMobile={isMobile}>
+        {workExperience.map((experience) => {
+          return (
+            <TestimonieCard
+              isMobile={isMobile}
+              author={experience.autor}
+              description={experience.description}
+              image={experience.img}
+            />
+          );
+        })}
+      </Carousel>
     </div>
   );
 };

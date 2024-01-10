@@ -5,17 +5,19 @@ interface TestimonieCardProps {
   description: string;
   author: string;
   image: string;
+  isMobile: boolean;
 }
 
 export const TestimonieCard = ({
   description,
   author,
   image,
+  isMobile,
 }: TestimonieCardProps) => {
   return (
     <div
       style={{
-        minWidth: "360px",
+        width: isMobile ? "85%" : "360px",
         height: "300px",
         background: "white",
         borderRadius: "15px",

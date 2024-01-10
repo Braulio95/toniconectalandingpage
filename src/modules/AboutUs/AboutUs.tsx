@@ -63,6 +63,7 @@ export const AboutUs = ({ isMobile }: AboutUsProps) => {
         Sobre ToniConecta
       </SubtitleComp>
       <div className="content-container">
+        <div className={`background-video`}></div>
         <img src={aboutUs} alt="about us" />
         <div className="description-text" style={{ maxWidth: 1280 / 2 }}>
           {paragraphs}

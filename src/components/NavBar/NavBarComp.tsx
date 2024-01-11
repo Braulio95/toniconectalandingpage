@@ -62,7 +62,7 @@ function NavBarComp({ tabItems, isMobile }: NavBarProps) {
               target="_blank"
               rel="noreferrer"
             >
-              <WhatsAppIcon width="40px" height="40px" color="#5c81eb" />
+              <WhatsAppIcon width="32px" height="32px" color="#5c81eb" />
             </a>
 
             <button

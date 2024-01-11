@@ -6,6 +6,8 @@ import fixCity from "../../assets/testimonies/fixcity.png";
 import servicioHuawei from "../../assets/testimonies/seviciotecnicohw.png";
 import caremobile from "../../assets/testimonies/caremobile.png";
 import "./Testimonies.css";
+import { TestimonieCard } from "../../components/TestimonieCard/TestimonieCard";
+import Carousel from "../../components/Carousel/Carousel";
 interface TestimoniesProps {
   isMobile: boolean;
 }
@@ -43,17 +45,33 @@ export const Testimonies = ({ isMobile }: TestimoniesProps) => {
   ];
 
   return (
-    <div id="testimonios" className="testimonios">
-      <SubtitleComp
-        style={{
-          textAlign: isMobile ? "center" : "left",
-          marginBottom: "3rem",
-        }}
-      >
-        Lo que nuestros clientes opinan
-      </SubtitleComp>
+    <div
+      id="testimonios"
+      className={`testimonios ${isMobile ? "testimonios-mobile" : ""}`}
+    >
+      <div className="testimonites-title">
+        <SubtitleComp
+          style={{
+            textAlign: isMobile ? "center" : "left",
+            marginBottom: "3rem",
+          }}
+        >
+          Lo que nuestros clientes opinan
+        </SubtitleComp>
+      </div>
 
-      <ExpComp experiences={workExperience} isMobile={isMobile} />
+      <Carousel isMobile={isMobile}>
+        {workExperience.map((experience) => {
+          return (
+            <TestimonieCard
+              isMobile={isMobile}
+              author={experience.autor}
+              description={experience.description}
+              image={experience.img}
+            />
+          );
+        })}
+      </Carousel>
     </div>
   );
 };

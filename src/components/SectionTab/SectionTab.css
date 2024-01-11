@@ -1,0 +1,11 @@
+.tab-howit {
+  border: 1px solid #9f45a2;
+  background-color: #0a3273;
+  border-radius: 30px;
+  color: white;
+  font-weight: 700;
+}
+
+.active {
+  background-color: rgb(133, 51, 191, 0.28);
+}

@@ -1,0 +1,5 @@
+.linea-negra {
+  width: 100%;
+  height: 2px; /* Altura de la línea, ajusta según sea necesario */
+  background-color: black; /* Color de la línea */
+}

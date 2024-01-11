@@ -1,0 +1,28 @@
+.websandleads-container{
+    display: flex;
+    gap: 16px;
+}
+
+.websandleads-container-mobile{
+    flex-direction: column;
+}
+
+.websandleads-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.websandleads-video{
+    width: 15rem;
+    display: flex;
+    margin-inline: auto;
+    border-radius: 30px;
+
+}
+
+.websandleads-advantajes{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}

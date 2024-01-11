@@ -39,15 +39,6 @@ export const MainRoutes = ({ isMobile }: MainRoutesProps) => {
       {isMobile === false && <WhatsAppScrollButton />}
       <NavBarComp tabItems={navTabs} isMobile={isMobile} />
       {/* Main Content */}
-      {/* Tags for SEO */}
-      <h1 style={{ display: "none" }}>
-        Toni Conecta - Posicionar en Google numero 1 para talleres de reparacion
-        - SEO para talleres de reparacion
-      </h1>
-      <h2 style={{ display: "none" }}>
-        Toni Conecta - Aparecer numero 1 en Google para talleres de servicio
-        tecnico
-      </h2>
       <Home isMobile={isMobile} />
       <HowItWorks isMobile={isMobile} />
       <Testimonies isMobile={isMobile} />

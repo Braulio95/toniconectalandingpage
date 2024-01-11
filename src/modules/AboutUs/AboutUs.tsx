@@ -23,9 +23,10 @@ export const AboutUs = ({ isMobile }: AboutUsProps) => {
 
   if (isMobile) {
     return (
-      <div id="sobrenosotros" className="aboutus">
+      <div id="sobrenosotros" className="aboutus-mobile">
         <div className="content-container-mobile">
-          <img src={aboutUs} alt="about us" />
+          <div className={`background-video-mobile`}></div>
+          <img src={aboutUs} alt="about us" className="video-comp" />
           <SubtitleComp
             style={{
               textAlign: "left",

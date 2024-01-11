@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/toniconectalandingpage/static/css/main.284abd41.css",
-    "main.js": "/toniconectalandingpage/static/js/main.d6de84be.js",
+    "main.css": "/toniconectalandingpage/static/css/main.2b66c08f.css",
+    "main.js": "/toniconectalandingpage/static/js/main.7fd3a760.js",
     "static/js/787.a361b86b.chunk.js": "/toniconectalandingpage/static/js/787.a361b86b.chunk.js",
     "static/media/giftoni.gif": "/toniconectalandingpage/static/media/giftoni.af270bed64ee63ad5a12.gif",
-    "static/media/aboutus.png": "/toniconectalandingpage/static/media/aboutus.636294b05a8887e92a74.png",
+    "static/media/aboutus.png": "/toniconectalandingpage/static/media/aboutus.0120a7e7379774a6e2f7.png",
     "static/media/whatslogo.png": "/toniconectalandingpage/static/media/whatslogo.de0922ed7476b4afabd9.png",
     "static/media/logo.png": "/toniconectalandingpage/static/media/logo.29aacf69471ca9d2b568.png",
+    "static/media/ToniVideo.jpg": "/toniconectalandingpage/static/media/ToniVideo.66d278913b7b3f728b37.jpg",
     "static/media/fixcity.png": "/toniconectalandingpage/static/media/fixcity.ce24dc17824151c961e3.png",
     "static/media/centrodeservicio.png": "/toniconectalandingpage/static/media/centrodeservicio.09b335e73713ba23e722.png",
     "static/media/seviciotecnicohw.png": "/toniconectalandingpage/static/media/seviciotecnicohw.5b50788e0fb55741382a.png",
     "static/media/caremobile.png": "/toniconectalandingpage/static/media/caremobile.086bd31ca776749d8073.png",
-    "static/media/number1.png": "/toniconectalandingpage/static/media/number1.de22193ba9f04d01179a.png",
     "index.html": "/toniconectalandingpage/index.html",
-    "main.284abd41.css.map": "/toniconectalandingpage/static/css/main.284abd41.css.map",
-    "main.d6de84be.js.map": "/toniconectalandingpage/static/js/main.d6de84be.js.map",
+    "main.2b66c08f.css.map": "/toniconectalandingpage/static/css/main.2b66c08f.css.map",
+    "main.7fd3a760.js.map": "/toniconectalandingpage/static/js/main.7fd3a760.js.map",
     "787.a361b86b.chunk.js.map": "/toniconectalandingpage/static/js/787.a361b86b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.284abd41.css",
-    "static/js/main.d6de84be.js"
+    "static/css/main.2b66c08f.css",
+    "static/js/main.7fd3a760.js"
   ]
 }
